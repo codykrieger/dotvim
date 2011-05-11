@@ -1,3 +1,14 @@
+task :install do
+  puts "Installing awesomeness!!..."
+
+  system "git submodule update --init"
+  system "git submodule update"
+
+  Rake::Task['pull'].execute
+  Rake::Task['update_docs'].execute
+  Rake::Task['link_vimrc'].execute
+end
+
 task :clean do
   system "git clean -dfx"
 end
@@ -22,7 +33,11 @@ desc "Pull latest changes"
 task :pull do
   system "git pull"
   system "git submodule update --init"
-  system "git submodule update"
+  system "git submodule foreach git checkout master"
+  system "git submodule foreach git pull"
+
+  # Command-T
+  system "cd bundle/command-t && rake make"
 end
 
 task :default => [:update_docs, :link_vimrc]

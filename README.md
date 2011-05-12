@@ -91,8 +91,8 @@ unimpaired     # handy bracket mappings
 - Real tabs for Makefiles
 - 4-space tabs for Python files
 - Automagical auto-indent
-- <leader>e autocompletion to the current dir to edit a file
-- <leader>te autocompletion to the current dir to edit a file in a new
+- \<leader\>e autocompletion to the current dir to edit a file
+- \<leader\>te autocompletion to the current dir to edit a file in a new
   tab
 - ctrl-up and ctrl-down to "bubble" lines up and down in normal and
   visual modes
@@ -100,7 +100,7 @@ unimpaired     # handy bracket mappings
   searching
 - ~/.vim/backup directory for holding .swp files
 - ctrl-k for deleting lines (dd command)
-- <leader>tn to switch to the next tab, <leader>tp for previous tab
+- \<leader\>tn to switch to the next tab, \<leader\>tp for previous tab
 
 That's most of it. The rest of the customizations are mainly GUI tweaks,
 etc. Take a look at the vimrc/gvimrc files for more info. They're pretty

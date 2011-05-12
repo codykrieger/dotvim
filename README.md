@@ -51,12 +51,13 @@ of Command-T.
 Plugins & Customizations
 ========================
 
+```
 align
 coffee-script
 command-t
 cucumber
 delimitMate
-endwise
+en`wise
 fugitive
 gist
 git
@@ -76,6 +77,7 @@ supertab
 surround
 textile
 unimpaired
+```
 
 Color Schemes
 =============

@@ -2,6 +2,11 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+" disable command-t for non-os x systems for the time being
+if !has('mac')
+  let g:pathogen_disabled = ['command-t']
+endif
+
 " reset leader (default \)
 let mapleader=","
 

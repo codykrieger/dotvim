@@ -52,31 +52,31 @@ Plugins & Customizations
 ========================
 
 ```
-align
-coffee-script
-command-t
-cucumber
-delimitMate
-en`wise
-fugitive
-gist
-git
-haml
-indent-object
-javascript
-markdown
-mustache
-nerdcommenter
-nerdtree
-puppet
-rails
-rspec
-scala
-snipmate
-supertab
-surround
-textile
-unimpaired
+align                 # for auto-aligning assignment statements, etc.
+coffee-script         # duh, coffeescript
+command-t             # textmate-like fuzzy file quick-open thingy
+cucumber              # duh, cucumber
+delimitMate           # textmate-like parentheses/quote/brace auto-insertion
+endwise               # auto-insert end keyword in ruby
+fugitive              # for working with git in vim
+gist                  # create github gists right from within vim!
+git                   # MORE GIT
+haml                  # duh, haml
+indent-object         # represents code at the same indent level as an object
+javascript            # duh, javascript
+markdown              # duh, markdown
+mustache              # duh, mustache
+nerdcommenter         # awesome automagical commenting plugin, mapped to <leader>/
+nerdtree              # project drawer! hide/show mapped to <leader>n
+puppet                # duh, puppet
+rails                 # if you're not using this with rails, you're doing it wrong (tm)
+rspec                 # duh, rspec
+scala                 # duh, scala
+snipmate              # textmate-like snippets
+supertab              # SUPERTAB!!!!!
+surround              # quoting/parenthesizing made simple
+textile               # duh, textile
+unimpaired            # handy bracket mappings
 ```
 
 Color Schemes

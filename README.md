@@ -2,7 +2,8 @@ Super Awesome Vim Files (tm)
 ============================
 
 Essentially a slimmed down [Janus](/carlhuda/janus), managed with
-Pathogen. See below for a list of plugins/customizations/color schemes.
+[Pathogen](/tpope/vim-pathogen). See below for a list of plugins, 
+customizations and color schemes.
 
 Installing
 ==========

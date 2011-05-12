@@ -82,9 +82,11 @@ unimpaired
 Color Schemes
 =============
 
+```
 solarized (default)
 color-sampler-pack
 molokai
 irblack
 vividchalk
+```
 

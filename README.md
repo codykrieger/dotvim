@@ -8,7 +8,7 @@ customizations and color schemes.
 Installing
 ==========
 
-On OS X, first install MacVim!
+If you're using Mac OS X, install MacVim!
 
 ```
 brew install macvim # you better be using homebrew *shakes fist*
@@ -26,16 +26,17 @@ In most cases, that'll do it!
 
 ## Issues
 
-You might run into an error that says something like this:
+Upon running vim/gvim, you might run into an error that says something 
+like this:
 
 ```
 Vim: Caught deadly signal SEGV...
 ```
 
 That means your vim/gvim was compiled with Ruby, but ```setup.sh```
-compiled Command-T with a different version of Ruby. To fix this, you'll
+compiled Command-T with a **different version** of Ruby. To fix this, you'll
 need to find the version of Ruby your vim/gvim was compiled against
-(```(vim|gvim) --version``` and sift through the output), install that,
+(```[vim|gvim] --version``` and sift through the output), install that,
 rubygems, and rake, and then do one of these:
 
 ```

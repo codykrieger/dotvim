@@ -37,9 +37,7 @@ task :pull do
   # system "git submodule foreach git pull"
 
   # Command-T
-  # cmd = "cd bundle/command-t && rake make"
-  # system "rvm use system ; #{cmd}"
-  system "./magic.sh"
+  system "cd bundle/command-t && rake make"
 end
 
 task :default => [:update_docs, :link_vimrc]

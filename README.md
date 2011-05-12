@@ -15,6 +15,8 @@ brew install macvim # you better be using homebrew *shakes fist*
 
 Otherwise, install gvim with your favorite package manager.
 
+Then:
+
 ```
 cd ~
 git clone git://github.com/codykrieger/dotvim.git .vim

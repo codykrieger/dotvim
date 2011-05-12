@@ -51,6 +51,8 @@ of Command-T.
 Plugins & Customizations
 ========================
 
+## Plugins
+
 ```
 align          # for auto-aligning assignment statements, etc.
 coffee-script  # duh, coffeescript
@@ -78,6 +80,31 @@ surround       # quoting/parenthesizing made simple
 textile        # duh, textile
 unimpaired     # handy bracket mappings
 ```
+
+## Customizations
+
+- Leader set to comma (,), not backslash (\)
+- Status bar on
+- Ruler on (col/row display in status bar)
+- Default tabs set to spaces, width 2
+- Remembers last location in a given file
+- Real tabs for Makefiles
+- 4-space tabs for Python files
+- Automagical auto-indent
+- <leader>e autocompletion to the current dir to edit a file
+- <leader>te autocompletion to the current dir to edit a file in a new
+  tab
+- ctrl-up and ctrl-down to "bubble" lines up and down in normal and
+  visual modes
+- F1 remapped to :nohl to turn off search highlighting when you're done
+  searching
+- ~/.vim/backup directory for holding .swp files
+- ctrl-k for deleting lines (dd command)
+- <leader>tn to switch to the next tab, <leader>tp for previous tab
+
+That's most of it. The rest of the customizations are mainly GUI tweaks,
+etc. Take a look at the vimrc/gvimrc files for more info. They're pretty
+decently commented.
 
 Color Schemes
 =============

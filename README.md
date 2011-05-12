@@ -19,10 +19,7 @@ Otherwise, install gvim with your favorite package manager.
 Then:
 
 ```
-cd ~
-git clone git://github.com/codykrieger/dotvim.git .vim
-cd .vim
-./setup.sh
+curl https://github.com/codykrieger/dotvim/raw/master/bootstrap.sh -o - | sh
 ```
 
 In most cases, that'll do it!

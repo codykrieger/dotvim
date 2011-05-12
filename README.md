@@ -83,7 +83,7 @@ unimpaired     # handy bracket mappings
 
 ## Customizations
 
-- Leader set to comma (,), not backslash (\)
+- Leader set to comma (,), not backslash (\\)
 - Status bar on
 - Ruler on (col/row display in status bar)
 - Default tabs set to spaces, width 2

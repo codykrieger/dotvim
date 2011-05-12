@@ -90,7 +90,7 @@ unimpaired     # handy bracket mappings
 - Remembers last location in a given file
 - Real tabs for Makefiles
 - 4-space tabs for Python files
-- Automagical auto-indent
+- Automagical, syntax-aware auto-indent
 - \<leader\>e autocompletion to the current dir to edit a file
 - \<leader\>te autocompletion to the current dir to edit a file in a new
   tab

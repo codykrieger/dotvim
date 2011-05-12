@@ -130,5 +130,5 @@ cd ~/.vim/bundle/command-t
 /path/to/your/rake/binary make
 ```
 
-Then run vim/gvim again, and you should be okay! If not...just get rid
-of Command-T.
+Then run vim/gvim again, and you should be okay! If not...forget about 
+Command-T.

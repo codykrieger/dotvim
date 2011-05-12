@@ -8,13 +8,23 @@ customizations and color schemes.
 Installing
 ==========
 
-If you're using Mac OS X, install MacVim!
+## Mac OS X
+
+Install MacVim if you want it (you should)!!
 
 ```
 brew install macvim # you better be using homebrew *shakes fist*
 ```
 
-Otherwise, install gvim with your favorite package manager.
+Otherwise, you're set.
+
+## Anything Else (tm)
+
+- Have some flavour of Ruby installed
+- Install gvim with your favorite package manager (optional)
+- Install rake (```[sudo] gem install rake```)
+
+## All Systems
 
 Then:
 
@@ -24,33 +34,14 @@ curl https://github.com/codykrieger/dotvim/raw/master/bootstrap.sh -o - | sh
 
 In most cases, that'll do it!
 
-## Issues
-
-Upon running vim/gvim, you might run into an error that says something 
-like this:
-
-```
-Vim: Caught deadly signal SEGV...
-```
-
-That means your vim/gvim was compiled with Ruby, but ```setup.sh```
-compiled Command-T with a **different version** of Ruby. To fix this, you'll
-need to find the version of Ruby your vim/gvim was compiled against
-(```[vim|gvim] --version``` and sift through the output), install that,
-rubygems, and rake, and then do one of these:
-
-```
-cd ~/.vim/bundle/command-t
-/path/to/your/rake/binary make
-```
-
-Then run vim/gvim again, and you should be okay! If not...just get rid
-of Command-T.
-
 Plugins & Customizations
 ========================
 
 ## Plugins
+
+**Note**: Command-T is disabled by default on non-Mac OS X systems. 
+Some trickery is required to get it to work. See the section on 
+Command-T below.
 
 ```
 align          # for auto-aligning assignment statements, etc.
@@ -116,3 +107,28 @@ irblack
 vividchalk
 ```
 
+Command-T
+=========
+
+If you take a look at the first four or so lines of the vimrc, you'll 
+notice that I've told Pathogen to disable loading Command-T on non-Mac 
+OS X systems. This is because you'll end up with the following error 
+unless you perform some trickery:
+
+```
+Vim: Caught deadly signal SEGV...
+```
+
+That means your vim/gvim was compiled with Ruby, but ```setup.sh```
+compiled Command-T with a **different version** of Ruby. To fix this, you'll
+need to find the version of Ruby your vim/gvim was compiled against
+(```[vim|gvim] --version``` and sift through the output), install that,
+rubygems, and rake, and then do one of these:
+
+```
+cd ~/.vim/bundle/command-t
+/path/to/your/rake/binary make
+```
+
+Then run vim/gvim again, and you should be okay! If not...just get rid
+of Command-T.

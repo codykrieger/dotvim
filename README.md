@@ -24,8 +24,11 @@ cd .vim
 ./setup.sh
 ```
 
-In most cases, that'll do it. If you're on OS X, you're golden. If not,
-you might run into an error that says something like this:
+In most cases, that'll do it!
+
+## Issues
+
+You might run into an error that says something like this:
 
 ```
 Vim: Caught deadly signal SEGV...

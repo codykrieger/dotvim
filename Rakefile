@@ -38,9 +38,7 @@ task :pull do
 
   # Command-T
   cmd = "cd bundle/command-t && rake make"
-  unless system "rvm use system && #{cmd}"
-    system cmd
-  end
+  system "rvm use system ; #{cmd}"
 end
 
 task :default => [:update_docs, :link_vimrc]

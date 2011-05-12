@@ -1,5 +1,5 @@
 task :install do
-  puts "Installing awesomeness!!..."
+  puts "Installing awesomeness!!...\n"
 
   system "git submodule update --init"
   system "git submodule update"
@@ -37,7 +37,10 @@ task :pull do
   system "git submodule foreach git pull"
 
   # Command-T
-  system "cd bundle/command-t && rake make"
+  cmd = "cd bundle/command-t && rake make"
+  unless system "rvm use system && #{cmd}"
+    system cmd
+  end
 end
 
 task :default => [:update_docs, :link_vimrc]

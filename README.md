@@ -42,7 +42,7 @@ rubygems, and rake, and then do one of these:
 
 ```
 cd ~/.vim/bundle/command-t
-/path/to/your/rake/gem/binary make
+/path/to/your/rake/binary make
 ```
 
 Then run vim/gvim again, and you should be okay! If not...just get rid

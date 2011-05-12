@@ -34,7 +34,7 @@ task :pull do
   system "git pull"
   system "git submodule update --init"
   system "git submodule foreach git checkout master"
-  system "git submodule foreach git pull"
+  # system "git submodule foreach git pull"
 
   # Command-T
   cmd = "cd bundle/command-t && rake make"

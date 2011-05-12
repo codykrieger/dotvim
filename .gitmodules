@@ -91,3 +91,6 @@
 [submodule "bundle/closepairs"]
 	path = bundle/closepairs
 	url = git://github.com/vim-scripts/ClosePairs.git
+[submodule "bundle/delimitmate"]
+	path = bundle/delimitmate
+	url = git://github.com/Raimondi/delimitMate.git

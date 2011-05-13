@@ -1,3 +1,7 @@
+" Disable stupid annoying visual bell with gvim
+autocmd VimEnter * set vb t_vb=
+
+" Set default window size
 set lines=40 columns=140
 
 " Adjust viewports to the same size

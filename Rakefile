@@ -34,10 +34,18 @@ task :pull do
   system "git pull"
   system "git submodule update --init"
   system "git submodule foreach git checkout master"
-  # system "git submodule foreach git pull"
 
   # Command-T
-  # system "cd bundle/command-t && rake make"
+  Dir.chdir "bundle/command-t" do
+    if File.exists?("/usr/bin/ruby1.8") # prefer 1.8 on *.deb systems
+      sh "/usr/bin/ruby1.8 extconf.rb"
+    elsif File.exists?("/usr/bin/ruby") # prefer system rubies
+      sh "/usr/bin/ruby extconf.rb"
+    elsif `rvm > /dev/null 2>&1` && $?.exitstatus == 0
+      sh "rvm system ruby extconf.rb"
+    end
+    sh "make clean && make"
+  end  
 end
 
 task :default => [:update_docs, :link_vimrc]

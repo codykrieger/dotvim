@@ -36,7 +36,7 @@ task :pull do
   system "git submodule foreach git checkout master"
 
   # Command-T
-  Dir.chdir "bundle/command-t" do
+  Dir.chdir "bundle/command-t/ruby/command-t" do
     if File.exists?("/usr/bin/ruby1.8") # prefer 1.8 on *.deb systems
       sh "/usr/bin/ruby1.8 extconf.rb"
     elsif File.exists?("/usr/bin/ruby") # prefer system rubies

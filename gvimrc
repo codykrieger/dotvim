@@ -1,10 +1,8 @@
-if has("gui")
-  set lines=40 columns=140
+set lines=40 columns=140
 
-  " Adjust viewports to the same size
-  map <Leader>= <C-w>=
-  imap <Leader>= <Esc> <C-w>=
-endif
+" Adjust viewports to the same size
+map <Leader>= <C-w>=
+imap <Leader>= <Esc> <C-w>=
 
 if has("gui_macvim")
   " Fullscreen takes up entire screen

@@ -7,5 +7,4 @@ if [ "$?" -eq "0" ] ; then
 fi
 
 rake install
-cd bundle/command-t && rake make
 

@@ -32,15 +32,19 @@ Then:
 curl https://github.com/codykrieger/dotvim/raw/master/bootstrap.sh -o - | sh
 ```
 
-In most cases, that'll do it! If you encounter an error like the following 
-when attempting to run vim or gvim:
+In most cases, that'll do it!
+
+## Problem???
+
+If you encounter an error like the following when attempting to run vim or 
+gvim:
 
 ```
 Vim: Caught deadly signal SEGV...
 ```
 
 Then see the Command-T section at the bottom of the readme, or just uncomment 
-lines 2-4 in the ```vimrc``` file to disable Command-T.`
+lines 2-4 in the ```vimrc``` file to disable Command-T.
 
 Plugins & Customizations
 ========================

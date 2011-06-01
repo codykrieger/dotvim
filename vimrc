@@ -149,7 +149,7 @@ if has("gui_running")
   colorscheme solarized
   set bg=light
   if has("mac")
-    set gfn=Monaco:h12
+    set gfn=Menlo\ Regular:h11
   endif
 endif
 

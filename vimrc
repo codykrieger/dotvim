@@ -108,7 +108,8 @@ map <F1> :nohl<CR>
 imap <F1> <ESC>:nohl<CR> i
 
 " OMG -- for when you forget to sudo vim ...
-cmap w!! %!sudo tee > /dev/null %
+" ...actually wtf it totally doesn't work
+" cmap w!! %!sudo tee > /dev/null %
 
 " gist-vim defaults
 if has("mac")

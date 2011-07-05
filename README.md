@@ -29,7 +29,7 @@ Otherwise, you're set.
 Then:
 
 ```
-curl https://github.com/codykrieger/dotvim/raw/master/bootstrap.sh -o - | sh
+curl https://raw.github.com/codykrieger/dotvim/master/bootstrap.sh -o - | sh
 ```
 
 In most cases, that'll do it!

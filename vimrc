@@ -151,7 +151,7 @@ map <Leader>tn :tabnext<CR>
 if has("gui_running")
   " colorscheme molokai
   colorscheme solarized
-  set bg=dark
+  set bg=light
   if has("mac")
     set gfn=Menlo\ Regular:h12
   endif

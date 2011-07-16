@@ -3,6 +3,9 @@
 "   let g:pathogen_disabled = ['command-t']
 " endif
 
+" delimitmate is stupid and broken
+let g:pathogen_disabled = ['delimitmate']
+
 " pathogen magic
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()

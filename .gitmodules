@@ -102,4 +102,4 @@
 	url = git://github.com/mileszs/ack.vim.git
 [submodule "bundle/slim"]
 	path = bundle/slim
-	url = git://github.com/stonean/slim.git
+	url = git://github.com/bbommarito/vim-slim.git

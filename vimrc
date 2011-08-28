@@ -156,8 +156,10 @@ if has("gui_running")
   colorscheme solarized
   set bg=dark
   if has("mac")
-    set gfn=Monaco:h12
+    set gfn=Monaco:h13
   endif
+else
+  colorscheme ir_black
 endif
 
 " % to bounce from do to end etc.

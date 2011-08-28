@@ -153,8 +153,8 @@ map <Leader>tn :tabnext<CR>
 
 if has("gui_running")
   " colorscheme molokai
-  colorscheme solarized
-  set bg=dark
+  colorscheme ir_black
+  " set bg=dark
   if has("mac")
     set gfn=Monaco:h13
   endif

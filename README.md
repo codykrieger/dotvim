@@ -62,10 +62,10 @@ Plugins & Customizations
 
 ```
 align          # for auto-aligning assignment statements, etc.
+autoclose      # for closing logical pairs (e.g. '(' and ')', '"', ''', etc.)
 coffee-script  # duh, coffeescript
 command-t      # textmate-like fuzzy file quick-open thingy. mapped to <super>t and <leader>t
 cucumber       # duh, cucumber
-delimitMate    # textmate-like parentheses/quote/brace auto-insertion
 endwise        # auto-insert end keyword in ruby
 fugitive       # for working with git in vim
 gist           # create github gists right from within vim!

@@ -3,6 +3,9 @@
 "   let g:pathogen_disabled = ['command-t']
 " endif
 
+" Scrolling. Text selection.
+set mouse=a
+
 " delimitmate is stupid and broken
 let g:pathogen_disabled = ['delimitmate']
 
@@ -36,6 +39,9 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+" Be able to arrow key and backspace across newlines
+set whichwrap=bs<>[]
 
 " Tab completion
 set wildmode=list:longest,list:full
@@ -168,7 +174,41 @@ runtime! macros/matchit.vim
 " Show (partial) command in the status line
 set showcmd
 
+if has("autocmd")
+  " language-specific indentation settings
+  autocmd FileType c,cpp               setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
+  autocmd FileType sh,csh,tcsh,zsh     setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType php,javascript,css  setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType text,txt,mkd        setlocal ts=4 sts=4 sw=4 et tw=80 wrap
+
+  autocmd FileType html,xhtml,xml      setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType ruby,eruby,yaml     setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType scm,sml,lisp        setlocal ts=2 sts=2 sw=2 et tw=80 nowrap
+
+  " language-specific general settings
+
+  " run file
+  autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
+  " check syntax
+  autocmd FileType php noremap <C-L> :w!<CR>:!php -l %<CR>
+endif
+
+syntax enable "Enable syntax hl
+set t_Co=256
+if has("gui_running") || $TERM=="xterm-256color"
+  set t_Co=256
+  set guioptions-=T
+  set nonu
+else
+  "Had to do this in order to continue to allow syntax highlighting on non-
+  "xterm-256color and non-GUI vims.  On OS X, the entire file flashes
+  "if this is not set.
+  set t_Co=256
+  set nonu
+endif
+
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
   source ~/.vimrc.local
 endif
+

@@ -1,5 +1,5 @@
 task :install do
-  puts "Installing awesomeness!!...\n"
+  puts "Installing awesomeness!!!...\n"
 
   system "git submodule update --init"
   system "git submodule update"

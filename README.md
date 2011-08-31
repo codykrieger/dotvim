@@ -8,7 +8,7 @@ customizations and color schemes.
 Installing
 ==========
 
-## Mac OS X
+## If on Mac OS X
 
 Install MacVim if you want it (you should)!!
 
@@ -18,21 +18,30 @@ brew install macvim # you better be using homebrew *shakes fist*
 
 Otherwise, you're set.
 
-## Anything Else (tm)
+## If on another OS
 
 - Have some flavour of Ruby installed
 - Install gvim with your favorite package manager (optional)
 - Install rake (```[sudo] gem install rake```)
 
-## All Systems
-
-Then:
+## Then...
 
 ```
 curl https://raw.github.com/codykrieger/dotvim/master/bootstrap.sh -o - | sh
 ```
 
 In most cases, that'll do it!
+
+## Ignoring documentation content in submodules
+
+Run this bad boy in your ~/.vim folder:
+
+```
+git submodule -q foreach 'echo "git config submodule.$path.ignore" untracked'
+```
+
+Copy the lines it outputs, and paste them into your terminal. No more 
+annoyingness in `git status`!
 
 ## Problem???
 

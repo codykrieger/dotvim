@@ -214,7 +214,18 @@ call s:DefineCommand("rm", "Remove")
 call s:DefineCommand("e", "Edit")
 call s:DefineCommand("mkdir", "Mkdir")
 
+" If we go fullscreen, use all the room.
+set fuopt=maxvert,maxhorz
+
+" Stupid blinking cursor.
+set gcr=n:blinkon0
+
+" Disable the right and left scroll bar.
+set guioptions-=r
+set guioptions-=L
+
 " Include user's local vim config
 if filereadable(expand("~/.gvimrc.local"))
   source ~/.gvimrc.local
 endif
+

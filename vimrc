@@ -19,7 +19,6 @@ let mapleader=","
 " screw vi
 set nocompatible
 
-set number
 set ruler
 syntax on
 
@@ -206,6 +205,9 @@ else
   set t_Co=256
   set nonu
 endif
+
+" Line numbers
+set number
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))

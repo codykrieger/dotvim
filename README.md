@@ -37,7 +37,7 @@ In most cases, that'll do it!
 Run this bad boy in your ~/.vim folder:
 
 ```
-git submodule -q foreach 'echo "git config submodule.$path.ignore" untracked'
+git submodule -q foreach 'echo "git config submodule.$path.ignore untracked"'
 ```
 
 Copy the lines it outputs, and paste them into your terminal. No more 

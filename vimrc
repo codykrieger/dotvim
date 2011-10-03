@@ -34,10 +34,6 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
-set shiftround
-set copyindent
-set autoindent
-set smarttab
 
 " Searching
 set hlsearch
@@ -214,6 +210,12 @@ endif
 
 " Line numbers
 set number
+
+" More auto indentation/tab magic
+set shiftround
+set copyindent
+set autoindent
+set smarttab
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))

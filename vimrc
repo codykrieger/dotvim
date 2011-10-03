@@ -7,7 +7,9 @@
 set mouse=a
 
 " delimitmate is stupid and broken
-let g:pathogen_disabled = ['delimitmate']
+" snipmate makes backspace do weird shit
+" autoclose sucks and is broken, too
+let g:pathogen_disabled = ['delimitmate', 'snipmate', 'autoclose']
 
 " pathogen magic
 call pathogen#runtime_append_all_bundles()
@@ -32,6 +34,10 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
+set shiftround
+set copyindent
+set autoindent
+set smarttab
 
 " Searching
 set hlsearch

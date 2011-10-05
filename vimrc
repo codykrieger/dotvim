@@ -135,7 +135,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
+" color desert
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -165,7 +165,7 @@ if has("gui_running")
     set gfn=Monaco:h13
   endif
 else
-  colorscheme ir_black
+  colorscheme desert256
 endif
 
 " % to bounce from do to end etc.

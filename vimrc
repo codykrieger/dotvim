@@ -1,45 +1,71 @@
+"""""""""""""""""""""""""""""""""
+" # PATHOGEN
+"""""""""""""""""""""""""""""""""
+
 " disable command-t for non-os x systems for the time being
 " if !has('mac')
 "   let g:pathogen_disabled = ['command-t']
 " endif
 
-" Scrolling. Text selection.
-set mouse=a
-
 " delimitmate is stupid and broken
 " snipmate makes backspace do weird shit
 " autoclose sucks and is broken, too
-let g:pathogen_disabled = ['delimitmate', 'snipmate', 'autoclose']
+let g:pathogen_disabled = ['delimitmate', 'snipmate', 'autoclose', 'closetag-vim']
 
 " pathogen magic
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+"""""""""""""""""""""""""""""""""
+" # GENERAL
+"""""""""""""""""""""""""""""""""
+
+" Automatically load changed files
+set autoread
+
+" Auto-reload vimrc
+autocmd! bufwritepost vimrc source ~/.vim/vimrc
+" autocmd! bufwritepost gvimrc source ~/.vim/gvimrc
+
 " reset leader (default \)
 let mapleader=","
 
-" screw vi
-set nocompatible
+" Scrolling. Text selection.
+set mouse=a
 
-set ruler
-syntax on
+" We don't like vi
+set nocompatible
 
 " Set encoding
 set encoding=utf-8
 
-" Whitespace stuff
-set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set list listchars=tab:\ \ ,trail:·
+" Directories for swp files
+set backupdir=.,~/.vim/backup
+set directory=.,~/.vim/backupf
 
-" Searching
+"""""""""""""""""""""""""""""""""
+" # UI
+"""""""""""""""""""""""""""""""""
+
+" Line numbers
+set number
+
+" Always show current position
+set ruler
+
+" Highlight search matches
 set hlsearch
+" Act like search in modern web browsers
 set incsearch
+" Ignore case when searching
 set ignorecase
 set smartcase
+
+" Turn on magic for regexes
+set magic
+
+" Show matching braces when text indicator is over them
+" set showmatch
 
 " Be able to arrow key and backspace across newlines
 set whichwrap=bs<>[]
@@ -62,13 +88,63 @@ let g:CommandTMaxHeight=20
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
+endi
+
+" Show (partial) command in the status line
+set showcmd
+
+"""""""""""""""""""""""""""""""""
+" # COLORS/FONTS
+"""""""""""""""""""""""""""""""""
+
+" Syntax highlighting!
+syntax on
+syntax enable
+
+if has("gui_running")
+  colorscheme solarized
+  set bg=light
+  if has("mac")
+    set gfn=Monaco:h13
+  endif
+else
+  colorscheme desert256
 endif
 
-function s:setupWrapping()
+"""""""""""""""""""""""""""""""""
+" # TEXT, TABS, INDENTATION, ETC.
+"""""""""""""""""""""""""""""""""
+
+" Whitespace stuff
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+set list listchars=tab:\ \ ,trail:·
+
+function! s:SetupWrapping()
   set wrap
   set wrapmargin=2
   set textwidth=72
 endfunction
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" More auto indentation/tab magic
+" set shiftround
+" set copyindent
+" set smarttab
+set autoindent
+set smartindent
+
+"""""""""""""""""""""""""""""""""
+" # LANGUAGES/FILETYPES
+"""""""""""""""""""""""""""""""""
+
+" load the plugin and indent settings for the detected filetype
+filetype plugin indent on
 
 " make uses real tabs
 au FileType make set noexpandtab
@@ -76,19 +152,36 @@ au FileType make set noexpandtab
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
 
-" add json syntax highlighting
+" Add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
-au BufRead,BufNewFile *.txt call s:setupWrapping()
+au BufRead,BufNewFile *.txt call s:SetupWrapping()
 
 " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+if has("autocmd")
+  " language-specific indentation settings
+  autocmd FileType c,cpp                    setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
+  autocmd FileType sh,csh,tcsh,zsh          setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType php,javascript,css       setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType text,txt,mkd,md,mdown    setlocal ts=4 sts=4 sw=4 et tw=80 wrap
 
-" load the plugin and indent settings for the detected filetype
-filetype plugin indent on
+  autocmd FileType html,xhtml,xml           setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType ruby,eruby,yaml          setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType scm,sml,lisp             setlocal ts=2 sts=2 sw=2 et tw=80 nowrap
+
+  " language-specific general settings
+
+  " run file
+  autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
+  " check syntax
+  autocmd FileType php noremap <C-L> :w!<CR>:!php -l %<CR>
+endif
+
+"""""""""""""""""""""""""""""""""
+" # SHORTCUTS/MAPPINGS
+"""""""""""""""""""""""""""""""""
 
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
@@ -113,36 +206,9 @@ vmap <C-Down> ]egv
 " NERDCommenter
 map <Leader>/ <plug>NERDCommenterToggle
 
-" screw help
+" Remap help to clearing the search highlight
 map <F1> :nohl<CR>
 imap <F1> <ESC>:nohl<CR> i
-
-" OMG -- for when you forget to sudo vim ...
-" ...actually wtf it totally doesn't work
-" cmap w!! %!sudo tee > /dev/null %
-
-" gist-vim defaults
-if has("mac")
-  let g:gist_clip_command = 'pbcopy'
-elseif has("unix")
-  let g:gist_clip_command = 'xclip -selection clipboard'
-endif
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-
-" Use modeline overrides
-set modeline
-set modelines=10
-
-" Default color scheme
-" color desert
-
-" Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
-
-" MacVIM shift+arrow-keys behavior (required in .vimrc)
-let macvim_hig_shift_movement = 1
 
 " Delete line with CTRL-K
 map  <C-K>      dd
@@ -158,63 +224,48 @@ imap <C-J>      <C-O>gqap
 map <Leader>tp :tabp<CR>
 map <Leader>tn :tabnext<CR>
 
-if has("gui_running")
-  colorscheme solarized
-  set bg=light
-  if has("mac")
-    set gfn=Monaco:h13
-  endif
-else
-  colorscheme desert256
+" Bash-like home/end key mappings
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+
+" MacVIM shift+arrow-keys behavior (required in .vimrc)
+let macvim_hig_shift_movement = 1
+
+" gist-vim defaults
+if has("mac")
+  let g:gist_clip_command = 'pbcopy'
+elseif has("unix")
+  let g:gist_clip_command = 'xclip -selection clipboard'
 endif
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
-" Show (partial) command in the status line
-set showcmd
+"""""""""""""""""""""""""""""""""
+" # GUI STUFF
+"""""""""""""""""""""""""""""""""
 
-if has("autocmd")
-  " language-specific indentation settings
-  autocmd FileType c,cpp               setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
-  autocmd FileType sh,csh,tcsh,zsh     setlocal ts=4 sts=4 sw=4 et
-  autocmd FileType php,javascript,css  setlocal ts=4 sts=4 sw=4 et
-  autocmd FileType text,txt,mkd        setlocal ts=4 sts=4 sw=4 et tw=80 wrap
+" Use modeline overrides at the top of files if present
+set modeline
+" Only look at this number of lines for modeline
+set modelines=10
 
-  autocmd FileType html,xhtml,xml      setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType ruby,eruby,yaml     setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType scm,sml,lisp        setlocal ts=2 sts=2 sw=2 et tw=80 nowrap
-
-  " language-specific general settings
-
-  " run file
-  autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
-  " check syntax
-  autocmd FileType php noremap <C-L> :w!<CR>:!php -l %<CR>
-endif
-
-syntax enable "Enable syntax hl
 set t_Co=256
 if has("gui_running") || $TERM=="xterm-256color"
   set t_Co=256
   set guioptions-=T
-  set nonu
 else
   "Had to do this in order to continue to allow syntax highlighting on non-
   "xterm-256color and non-GUI vims.  On OS X, the entire file flashes
   "if this is not set.
   set t_Co=256
-  set nonu
 endif
 
-" Line numbers
-set number
-
-" More auto indentation/tab magic
-set shiftround
-set copyindent
-set autoindent
-set smarttab
+"""""""""""""""""""""""""""""""""
+" # LOCAL VIM CONFIG
+"""""""""""""""""""""""""""""""""
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))

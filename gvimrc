@@ -215,7 +215,7 @@ call s:DefineCommand("e", "Edit")
 call s:DefineCommand("mkdir", "Mkdir")
 
 " If we go fullscreen, use all the room.
-set fuopt=maxvert,maxhorz
+" set fuopt=maxvert,maxhorz
 
 " Stupid blinking cursor.
 set gcr=n:blinkon0

@@ -86,6 +86,7 @@ supertab       # SUPERTAB!!!!!
 surround       # quoting/parenthesizing made simple
 textile        # duh, textile
 unimpaired     # handy bracket mappings
+zencoding      # awesome html fanciness, look it up
 ```
 
 ## Customizations

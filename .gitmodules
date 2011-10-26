@@ -22,9 +22,6 @@
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git://github.com/ddollar/nerdcommenter.git
-[submodule "bundle/surroun"]
-	path = bundle/surroun
-	url = git://github.com/tpope/vim-surround.git
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git

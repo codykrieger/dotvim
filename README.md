@@ -43,18 +43,6 @@ git submodule -q foreach 'echo "git config submodule.$path.ignore untracked"'
 Copy the lines it outputs, and paste them into your terminal. No more 
 annoyingness in `git status`!
 
-## Problem???
-
-If you encounter an error like the following when attempting to run vim or 
-gvim:
-
-```
-Vim: Caught deadly signal SEGV...
-```
-
-Then see the Command-T section at the bottom of the readme, or just uncomment 
-lines 2-4 in the ```vimrc``` file to disable Command-T.
-
 Plugins & Customizations
 ========================
 

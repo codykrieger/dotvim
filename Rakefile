@@ -55,4 +55,4 @@ task :pull do
   end
 end
 
-task :default => [:update_docs, :link_vimrc]
+task :default => [:pull, :update_docs, :link_vimrc]

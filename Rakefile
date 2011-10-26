@@ -1,8 +1,8 @@
 task :install do
   puts "Installing awesomeness!!!...\n"
 
-  system "git submodule update --init"
-  system "git submodule update"
+  system "git submodule update --init > /dev/null"
+  system "git submodule update > /dev/null"
 
   Rake::Task['pull'].execute
   Rake::Task['update_docs'].execute
@@ -17,6 +17,9 @@ desc "Update the documentation"
 task :update_docs do
   puts "Updating VIM Documentation..."
   system "vim -e -s <<-EOF\n:helptags ~/.vim/doc\n:quit\nEOF"
+
+  puts "Ignoring documentation content in submodules..."
+  system "git submodule -q foreach 'echo \"git config submodule.$path.ignore untracked\"' > /dev/null"
 end
 
 desc "link vimrc to ~/.vimrc"
@@ -31,9 +34,12 @@ end
 
 desc "Pull latest changes"
 task :pull do
+  puts "Pulling..."
   system "git pull"
-  system "git submodule update --init"
-  system "git submodule foreach git checkout master"
+
+  puts "Updating submodules..."
+  system "git submodule update --init > /dev/null"
+  system "git submodule foreach git checkout master > /dev/null"
 
   # Command-T
   Dir.chdir "bundle/command-t/ruby/command-t" do

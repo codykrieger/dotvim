@@ -42,6 +42,7 @@ task :pull do
   system "git submodule foreach git checkout master > /dev/null"
 
   # Command-T
+  puts "\nBuilding Command-T native extensions..."
   Dir.chdir "bundle/command-t/ruby/command-t" do
     if File.exists?("/usr/bin/ruby1.8") # prefer 1.8 on *.deb systems
       sh "/usr/bin/ruby1.8 extconf.rb"

@@ -53,7 +53,6 @@ align          # for auto-aligning assignment statements, etc.
 coffee-script  # duh, coffeescript
 command-t      # textmate-like fuzzy file quick-open thingy. mapped to <super>t and <leader>t
 cucumber       # duh, cucumber
-delimitmate    # auto-closing of logical pairs ('(' and ')', '"' and '"', etc.)
 endwise        # auto-insert end keyword in ruby
 fugitive       # for working with git in vim
 gist           # create github gists right from within vim!

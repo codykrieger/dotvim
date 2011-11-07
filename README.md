@@ -50,30 +50,36 @@ Plugins & Customizations
 
 ```
 align          # for auto-aligning assignment statements, etc.
-coffee-script  # duh, coffeescript
 command-t      # textmate-like fuzzy file quick-open thingy. mapped to <super>t and <leader>t
-cucumber       # duh, cucumber
 endwise        # auto-insert end keyword in ruby
 fugitive       # for working with git in vim
 gist           # create github gists right from within vim!
 git            # MORE GIT
-haml           # duh, haml
 indent-object  # represents code at the same indent level as an object
-javascript     # duh, javascript
-markdown       # duh, markdown
-mustache       # duh, mustache
 nerdcommenter  # awesome automagical commenting plugin, mapped to <leader>/
 nerdtree       # project drawer! hide/show mapped to <leader>n
 puppet         # duh, puppet
 rails          # if you're not using this with rails, you're doing it wrong (tm)
-rspec          # duh, rspec
-scala          # duh, scala
 snipmate       # textmate-like snippets
 supertab       # SUPERTAB!!!!!
 surround       # quoting/parenthesizing made simple
-textile        # duh, textile
 unimpaired     # handy bracket mappings
 zencoding      # awesome html fanciness, look it up
+```
+
+## Syntaxes
+
+```
+coffee-script
+cucumber
+haml
+javascrip
+markdown
+mustache
+rspec
+ruby (updated)
+scala
+textile
 ```
 
 ## Customizations

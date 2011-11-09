@@ -85,9 +85,6 @@
 [submodule "bundle/mustache"]
 	path = bundle/mustache
 	url = git://github.com/juvenn/mustache.vim.git
-[submodule "bundle/closepairs"]
-	path = bundle/closepairs
-	url = git://github.com/vim-scripts/ClosePairs.git
 [submodule "bundle/delimitmate"]
 	path = bundle/delimitmate
 	url = git://github.com/Raimondi/delimitMate.git

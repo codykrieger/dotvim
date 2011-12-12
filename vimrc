@@ -11,7 +11,7 @@ endif
 
 " snipmate makes backspace do weird shit
 " autoclose sucks and is broken, too
-let g:pathogen_disabled += ['delimitmate', 'snipmate', 'autoclose', 'closetag-vim']
+let g:pathogen_disabled += ['delimitmate', 'snipmate', 'autoclose', 'closetag-vim', 'supertab']
 
 " pathogen magic
 call pathogen#runtime_append_all_bundles()
@@ -53,6 +53,9 @@ set number
 
 " Always show current position
 set ruler
+
+" Highlight current line
+set cursorline
 
 " Highlight search matches
 set hlsearch

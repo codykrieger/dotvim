@@ -7,6 +7,8 @@ let g:pathogen_disabled = []
 " disable command-t for non-os x systems for the time being
 if !has('mac')
   let g:pathogen_disabled += ['command-t']
+else
+  let g:pathogen_disabled += ['nerdtree']
 endif
 
 " snipmate makes backspace do weird shit

@@ -73,7 +73,7 @@ zencoding      # awesome html fanciness, look it up
 coffee-script
 cucumber
 haml
-javascrip
+javascript
 markdown
 mustache
 rspec

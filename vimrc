@@ -11,7 +11,7 @@ endif
 
 " snipmate makes backspace do weird shit
 " autoclose sucks and is broken, too
-let g:pathogen_disabled += ['delimitmate', 'snipmate', 'autoclose', 'closetag-vim', 'supertab']
+let g:pathogen_disabled += ['closepairs', 'delimitmate', 'snipmate', 'autoclose', 'closetag-vim', 'supertab']
 
 " pathogen magic
 call pathogen#runtime_append_all_bundles()
@@ -139,7 +139,7 @@ set backspace=indent,eol,start
 " More auto indentation/tab magic
 " set shiftround
 " set copyindent
-" set smarttab
+set smarttab
 set autoindent
 set smartindent
 

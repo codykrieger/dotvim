@@ -41,8 +41,8 @@ set nocompatible
 set encoding=utf-8
 
 " Directories for swp files
-set backupdir=.,~/.vim/backup
-set directory=.,~/.vim/backupf
+set backupdir=~/.vim/backup
+set directory=~/.vim/backupf
 
 """""""""""""""""""""""""""""""""
 " # UI
@@ -77,6 +77,7 @@ set whichwrap=bs<>[]
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.eot,*.svg,*.ttf,*.woff,*.jpg,*.png,*.gif,*.swp,*.psd
 
 " Status bar
 set laststatus=2

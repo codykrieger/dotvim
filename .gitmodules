@@ -106,3 +106,9 @@
 [submodule "bundle/closetag-vim"]
 	path = bundle/closetag-vim
 	url = git://github.com/vim-scripts/closetag.vim.git
+[submodule "bundle/vim-jade"]
+	path = bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
+[submodule "bundle/vim-stylus"]
+	path = bundle/vim-stylus
+	url = git://github.com/wavded/vim-stylus.git

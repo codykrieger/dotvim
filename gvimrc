@@ -2,7 +2,7 @@
 autocmd VimEnter * set vb t_vb=
 
 " Set default window size
-set lines=40 columns=120
+set lines=45 columns=140
 
 " Adjust viewports to the same size
 map <Leader>= <C-w>=

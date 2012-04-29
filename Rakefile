@@ -42,19 +42,19 @@ task :pull do
   system "git submodule foreach git checkout master > /dev/null"
 
   # Command-T
-  puts "\nBuilding Command-T native extensions..."
-  Dir.chdir "bundle/command-t/ruby/command-t" do
-    if File.exists?("/usr/bin/ruby1.8") # prefer 1.8 on *.deb systems
-      sh "/usr/bin/ruby1.8 extconf.rb"
-    elsif `rbenv > /dev/null 2>&1` && $?.exitstatus == 0
-      sh "ruby extconf.rb"
-    elsif File.exists?("/usr/bin/ruby") # prefer system rubies after rbenv
-      sh "/usr/bin/ruby extconf.rb"
-    elsif `rvm > /dev/null 2>&1` && $?.exitstatus == 0
-      sh "rvm system ruby extconf.rb"
-    end
-    sh "make clean && make"
-  end
+  # puts "\nBuilding Command-T native extensions..."
+  # Dir.chdir "bundle/command-t/ruby/command-t" do
+  #   if File.exists?("/usr/bin/ruby1.8") # prefer 1.8 on *.deb systems
+  #     sh "/usr/bin/ruby1.8 extconf.rb"
+  #   elsif `rbenv > /dev/null 2>&1` && $?.exitstatus == 0
+  #     sh "ruby extconf.rb"
+  #   elsif File.exists?("/usr/bin/ruby") # prefer system rubies after rbenv
+  #     sh "/usr/bin/ruby extconf.rb"
+  #   elsif `rvm > /dev/null 2>&1` && $?.exitstatus == 0
+  #     sh "rvm system ruby extconf.rb"
+  #   end
+  #   sh "make clean && make"
+  # end
 end
 
 task :default => [:pull, :update_docs]

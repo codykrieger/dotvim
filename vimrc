@@ -4,14 +4,9 @@
 
 let g:pathogen_disabled = []
 
-" disable command-t for non-os x systems for the time being
-if !has('mac')
-  let g:pathogen_disabled += ['command-t']
-endif
-
 " snipmate makes backspace do weird shit
 " autoclose sucks and is broken, too
-let g:pathogen_disabled += ['closepairs', 'delimitmate', 'snipmate', 'autoclose', 'closetag-vim', 'supertab']
+" let g:pathogen_disabled += ['snipmate', 'closetag-vim', 'supertab']
 
 " pathogen magic
 call pathogen#runtime_append_all_bundles()
@@ -156,6 +151,7 @@ au FileType make set noexpandtab
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile *.html.erb set ft=html.eruby
 
 " Add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript

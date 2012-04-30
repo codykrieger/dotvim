@@ -2,7 +2,7 @@ Super Awesome Vim Files (tm)
 ============================
 
 Essentially a slimmed down [Janus](/carlhuda/janus), managed with
-[Pathogen](/tpope/vim-pathogen). See below for a list of plugins, 
+[Pathogen](/tpope/vim-pathogen). See below for a list of plugins,
 customizations and color schemes.
 
 Installing
@@ -20,9 +20,7 @@ Otherwise, you're set.
 
 ## If on another OS
 
-- Have some flavour of Ruby installed
 - Install gvim with your favorite package manager (optional)
-- Install rake (```[sudo] gem install rake```)
 
 ## Then...
 
@@ -32,25 +30,16 @@ curl https://raw.github.com/codykrieger/dotvim/master/bootstrap.sh -o - | sh
 
 In most cases, that'll do it!
 
-## Ignoring documentation content in submodules
-
-Run this bad boy in your ~/.vim folder:
-
-```
-git submodule -q foreach 'echo "git config submodule.$path.ignore untracked"'
-```
-
-Copy the lines it outputs, and paste them into your terminal. No more 
-annoyingness in `git status`!
-
 Plugins & Customizations
 ========================
 
 ## Plugins
 
 ```
+ack            # for ack-ing within a project
 align          # for auto-aligning assignment statements, etc.
-command-t      # textmate-like fuzzy file quick-open thingy. mapped to <super>t and <leader>t
+closetag-vim   # for auto-closing html, xml tags
+ctrlp          # textmate-like fuzzy file quick-open thingy. mapped to <super>t and ctrl-p
 endwise        # auto-insert end keyword in ruby
 fugitive       # for working with git in vim
 gist           # create github gists right from within vim!
@@ -58,8 +47,8 @@ git            # MORE GIT
 indent-object  # represents code at the same indent level as an object
 nerdcommenter  # awesome automagical commenting plugin, mapped to <leader>/
 nerdtree       # project drawer! hide/show mapped to <leader>n
-puppet         # duh, puppet
 rails          # if you're not using this with rails, you're doing it wrong (tm)
+smartinput     # for auto-closing of logical pairs like (), [], {}, ``, '', "", etc.
 snipmate       # textmate-like snippets
 supertab       # SUPERTAB!!!!!
 surround       # quoting/parenthesizing made simple
@@ -73,12 +62,16 @@ zencoding      # awesome html fanciness, look it up
 coffee-script
 cucumber
 haml
+jade
 javascript
 markdown
 mustache
+puppet
 rspec
 ruby (updated)
 scala
+slim
+stylus
 textile
 ```
 
@@ -118,28 +111,3 @@ irblack
 vividchalk
 ```
 
-Command-T
-=========
-
-If you take a look at the first four or so lines of the vimrc, you'll 
-notice that I've told Pathogen to disable loading Command-T on non-Mac 
-OS X systems. This is because you'll end up with the following error 
-unless you perform some trickery:
-
-```
-Vim: Caught deadly signal SEGV...
-```
-
-That means your vim/gvim was compiled with Ruby, but ```setup.sh```
-compiled Command-T with a **different version** of Ruby. To fix this, you'll
-need to find the version of Ruby your vim/gvim was compiled against
-(```[vim|gvim] --version``` and sift through the output), install that,
-rubygems, and rake, and then do one of these:
-
-```
-cd ~/.vim/bundle/command-t
-/path/to/your/rake/binary make
-```
-
-Then run vim/gvim again, and you should be okay! If not...forget about 
-Command-T.

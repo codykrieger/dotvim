@@ -8,27 +8,13 @@ customizations and color schemes.
 Installing
 ==========
 
-## If on Mac OS X
-
-Install MacVim if you want it (you should)!!
-
-```
-brew install macvim # you better be using homebrew *shakes fist*
-```
-
-Otherwise, you're set.
-
-## If on another OS
-
-- Install gvim with your favorite package manager (optional)
-
-## Then...
+Bootstrap'd!
 
 ```
 curl https://raw.github.com/codykrieger/dotvim/master/bootstrap.sh -o - | sh
 ```
 
-In most cases, that'll do it!
+In most cases, that'll do it! If you've got gvim/macvim installed, even better.
 
 Plugins & Customizations
 ========================

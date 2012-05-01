@@ -6,7 +6,7 @@ let g:pathogen_disabled = []
 
 " snipmate makes backspace do weird shit
 " autoclose sucks and is broken, too
-" let g:pathogen_disabled += ['snipmate', 'closetag-vim', 'supertab']
+" let g:pathogen_disabled += ['snipmate'] ", 'closetag-vim', 'supertab']
 
 " pathogen magic
 call pathogen#runtime_append_all_bundles()
@@ -31,6 +31,12 @@ set mouse=a
 
 " We don't like vi
 set nocompatible
+
+" Add the g flag to search/replace by default
+set gdefault
+
+" Show the filename in the window titlebar
+set title
 
 " Set encoding
 set encoding=utf-8
@@ -154,7 +160,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set f
 au BufRead,BufNewFile *.html.erb set ft=html.eruby
 
 " Add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.json set ft=json syntax=javascript
 
 au BufRead,BufNewFile *.txt call s:SetupWrapping()
 
@@ -206,6 +212,13 @@ vmap <C-Down> ]egv
 
 " NERDCommenter
 map <Leader>/ <plug>NERDCommenterToggle
+
+" Remove trailing whitespace from all lines in the current buffer
+command Rtrim call <SID>RightTrim()
+function <SID>RightTrim()
+  :% s/\s*$//g
+  nohl
+endfunction
 
 " Remap help to clearing the search highlight
 map <F1> :nohl<CR>

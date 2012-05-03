@@ -38,8 +38,8 @@ update_docs () {
 
 link_vimrc () {
     echo "Linking ~/.vimrc and ~/.gvimrc..."
-    ln -is ./vimrc ~/.vimrc
-    ln -is ./gvimrc ~/.gvimrc
+    ln -is $PWD/vimrc ~/.vimrc
+    ln -is $PWD/gvimrc ~/.gvimrc
 }
 
 pull () {

@@ -87,9 +87,6 @@ set laststatus=2
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
-" Command-T configuration
-let g:CommandTMaxHeight=20
-
 " Remember last location in file
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")

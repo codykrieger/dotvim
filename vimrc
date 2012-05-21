@@ -3,10 +3,7 @@
 """""""""""""""""""""""""""""""""
 
 let g:pathogen_disabled = []
-
-" snipmate makes backspace do weird shit
-" autoclose sucks and is broken, too
-" let g:pathogen_disabled += ['snipmate'] ", 'closetag-vim', 'supertab']
+let g:pathogen_disabled += ['vim-smartinput'] ", 'closetag-vim', 'supertab']
 
 " pathogen magic
 call pathogen#runtime_append_all_bundles()

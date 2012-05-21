@@ -34,7 +34,6 @@ indent-object  # represents code at the same indent level as an object
 nerdcommenter  # awesome automagical commenting plugin, mapped to <leader>/
 nerdtree       # project drawer! hide/show mapped to <leader>n
 rails          # if you're not using this with rails, you're doing it wrong (tm)
-smartinput     # for auto-closing of logical pairs like (), [], {}, ``, '', "", etc.
 snipmate       # textmate-like snippets
 supertab       # SUPERTAB!!!!!
 surround       # quoting/parenthesizing made simple

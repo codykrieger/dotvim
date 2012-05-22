@@ -3,7 +3,7 @@
 """""""""""""""""""""""""""""""""
 
 let g:pathogen_disabled = []
-let g:pathogen_disabled += ['vim-smartinput'] ", 'closetag-vim', 'supertab']
+let g:pathogen_disabled += ['vim-smartinput', 'nerdtree'] ", 'closetag-vim', 'supertab']
 
 " pathogen magic
 call pathogen#runtime_append_all_bundles()

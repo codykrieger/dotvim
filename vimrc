@@ -172,6 +172,8 @@ if has("autocmd")
   autocmd FileType ruby,eruby,yaml          setlocal ts=2 sts=2 sw=2 et
   autocmd FileType scm,sml,lisp             setlocal ts=2 sts=2 sw=2 et tw=80 nowrap
 
+  autocmd FileType changelog                setlocal ts=4 sts=4 sw=4 et tw=80 wrap
+
   " language-specific general settings
 
   " run file
@@ -208,8 +210,8 @@ vmap <C-Down> ]egv
 map <Leader>/ <plug>NERDCommenterToggle
 
 " Remove trailing whitespace from all lines in the current buffer
-command Rtrim call <SID>RightTrim()
-function <SID>RightTrim()
+command! Rtrim call <SID>RightTrim()
+function! <SID>RightTrim()
   :% s/\s*$//g
   nohl
 endfunction

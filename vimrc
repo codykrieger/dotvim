@@ -224,6 +224,9 @@ imap <F1> <ESC>:nohl<CR> i
 map  <C-K>      dd
 imap <C-K>      <C-O>dd
 
+" Select the just-changed (works for just-pasted) text
+nnoremap gp `[v`]
+
 " Format the current paragraph according to
 " the current 'textwidth' with CTRL-J:
 nmap <C-J>      gqap

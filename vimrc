@@ -107,8 +107,6 @@ if has("gui_running")
   if has("mac")
     set gfn=Menlo:h12
   endif
-else
-  colorscheme desert256
 endif
 
 """""""""""""""""""""""""""""""""

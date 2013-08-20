@@ -20,8 +20,9 @@ set autoread
 autocmd! bufwritepost vimrc source ~/.vim/vimrc
 " autocmd! bufwritepost gvimrc source ~/.vim/gvimrc
 
-" reset leader (default \)
+" Reset leader (default \), lower leader+<key> timeout
 let mapleader=","
+set timeoutlen=500
 
 " Scrolling. Text selection.
 set mouse=a
@@ -102,8 +103,7 @@ syntax on
 syntax enable
 
 if has("gui_running")
-  colorscheme solarized
-  set bg=light
+  colorscheme molokai
   if has("mac")
     set gfn=Menlo:h12
   endif

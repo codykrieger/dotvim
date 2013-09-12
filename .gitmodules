@@ -121,3 +121,6 @@
 [submodule "bundle/vim-detailed"]
 	path = bundle/vim-detailed
 	url = git://github.com/rking/vim-detailed.git
+[submodule "bundle/salt-vim"]
+	path = bundle/salt-vim
+	url = git://github.com/saltstack/salt-vim.git

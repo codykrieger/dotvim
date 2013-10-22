@@ -127,3 +127,6 @@
 [submodule "bundle/vim-golang"]
 	path = bundle/vim-golang
 	url = git://github.com/jnwhiteh/vim-golang.git
+[submodule "bundle/html5.vim"]
+	path = bundle/html5.vim
+	url = git://github.com/othree/html5.vim.git

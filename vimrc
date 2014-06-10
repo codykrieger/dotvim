@@ -105,7 +105,7 @@ syntax enable
 if has("gui_running")
   colorscheme molokai
   if has("mac")
-    set gfn=Menlo:h12
+    set gfn=Menlo:h14
   endif
 endif
 

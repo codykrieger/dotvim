@@ -133,3 +133,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = git://github.com/mattn/emmet-vim.git
+[submodule "bundle/vim-swift"]
+	path = bundle/vim-swift
+	url = git://github.com/toyamarinyon/vim-swift.git

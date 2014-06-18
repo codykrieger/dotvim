@@ -161,6 +161,8 @@ au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 au FileType glsl set ts=4 sts=4 sw=4 et tw=79
 
+au FileType go set noexpandtab
+
 au FileType {objc,objcpp} set ts=4 sts=4 sw=4 et
 
 if has("autocmd")

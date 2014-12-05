@@ -165,6 +165,7 @@ au FileType glsl set ts=4 sts=4 sw=4 et tw=79
 au FileType go set noexpandtab
 
 au FileType {objc,objcpp} set ts=4 sts=4 sw=4 et
+au BufNewFile,BufRead *.m set ft=objc
 
 if has("autocmd")
   " language-specific indentation settings

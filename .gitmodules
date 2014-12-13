@@ -136,3 +136,6 @@
 [submodule "bundle/vim-swift"]
 	path = bundle/vim-swift
 	url = git://github.com/toyamarinyon/vim-swift.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git

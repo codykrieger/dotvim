@@ -46,9 +46,6 @@
 [submodule "bundle/rspec"]
 	path = bundle/rspec
 	url = git://github.com/taq/vim-rspec.git
-[submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/garbas/vim-snipmate.git
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = git://github.com/tpope/vim-markdown.git

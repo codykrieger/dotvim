@@ -139,6 +139,14 @@ set autoindent
 set smartindent
 
 """""""""""""""""""""""""""""""""
+" # LINTING/STYLE CHECKING
+"""""""""""""""""""""""""""""""""
+
+if filereadable("~/.rbenv/shims/ruby")
+  let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
+endif
+
+"""""""""""""""""""""""""""""""""
 " # LANGUAGES/FILETYPES
 """""""""""""""""""""""""""""""""
 

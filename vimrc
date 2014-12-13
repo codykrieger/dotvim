@@ -170,10 +170,18 @@ au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 au FileType glsl set ts=4 sts=4 sw=4 et tw=79
 
-au FileType go set noexpandtab
-
 au FileType {objc,objcpp} set ts=4 sts=4 sw=4 et
 au BufNewFile,BufRead *.m set ft=objc
+
+au FileType go set noexpandtab
+
+au FileType go nmap <Leader>gr <Plug>(go-rename)
+au FileType go nmap <Leader>gi <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 if has("autocmd")
   " language-specific indentation settings

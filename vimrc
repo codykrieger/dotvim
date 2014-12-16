@@ -146,6 +146,8 @@ if filereadable("~/.rbenv/shims/ruby")
   let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
 endif
 
+let g:syntastic_eruby_checkers = []
+
 """""""""""""""""""""""""""""""""
 " # LANGUAGES/FILETYPES
 """""""""""""""""""""""""""""""""

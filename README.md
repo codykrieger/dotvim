@@ -11,7 +11,7 @@ Installing
 Bootstrap'd!
 
 ```
-curl https://raw.github.com/codykrieger/dotvim/master/bootstrap.sh -o - | sh
+curl https://raw.githubusercontent.com/codykrieger/dotvim/master/bootstrap.sh -o - | sh
 ```
 
 In most cases, that'll do it! If you've got gvim/macvim installed, even better.

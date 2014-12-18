@@ -103,8 +103,9 @@ set showcmd
 syntax on
 syntax enable
 
+colorscheme molokai
+
 if has("gui_running")
-  colorscheme molokai
   if has("mac")
     set gfn=Menlo:h14
   endif
@@ -291,13 +292,7 @@ set modelines=10
 
 set t_Co=256
 if has("gui_running") || $TERM=="xterm-256color"
-  set t_Co=256
   set guioptions-=T
-else
-  "Had to do this in order to continue to allow syntax highlighting on non-
-  "xterm-256color and non-GUI vims.  On OS X, the entire file flashes
-  "if this is not set.
-  set t_Co=256
 endif
 
 """""""""""""""""""""""""""""""""

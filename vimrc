@@ -126,7 +126,7 @@ set list listchars=tab:\ \ ,trail:·
 function! s:SetupWrapping()
   set wrap
   set wrapmargin=2
-  set textwidth=72
+  set textwidth=79
 endfunction
 
 " allow backspacing over everything in insert mode
@@ -157,27 +157,26 @@ let g:syntastic_eruby_checkers = []
 filetype plugin indent on
 
 " make uses real tabs
-au FileType make set noexpandtab
+au FileType make setlocal noexpandtab
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
-au BufRead,BufNewFile *.html.erb set ft=eruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    setlocal ft=ruby
+au BufRead,BufNewFile *.html.erb setlocal ft=eruby
 
 " Add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=json syntax=javascript
+au BufNewFile,BufRead *.json setlocal ft=json syntax=javascript
 
 au BufRead,BufNewFile *.txt call s:SetupWrapping()
 
 " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+au FileType python setlocal sts=4 ts=4 sw=4 tw=79
 
-au FileType glsl set ts=4 sts=4 sw=4 et tw=79
+au FileType glsl setlocal ts=4 sts=4 sw=4 et tw=79
 
-au FileType {objc,objcpp} set ts=4 sts=4 sw=4 et
-au BufNewFile,BufRead *.m set ft=objc
+au FileType {objc,objcpp} setlocal ts=4 sts=4 sw=4 et
+au BufNewFile,BufRead *.m setlocal ft=objc
 
 au FileType go set noexpandtab
-
 au FileType go nmap <Leader>gr <Plug>(go-rename)
 au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
@@ -186,12 +185,14 @@ au FileType go nmap <Leader>ds <Plug>(go-def-split)
 au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd} setlocal ft=markdown
+
 if has("autocmd")
   " language-specific indentation settings
   autocmd FileType c,cpp                    setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
   autocmd FileType sh,csh,tcsh,zsh          setlocal ts=4 sts=4 sw=4 et
   autocmd FileType php,javascript,css       setlocal ts=4 sts=4 sw=4 et
-  autocmd FileType text,txt,mkd,md,mdown    setlocal ts=4 sts=4 sw=4 et tw=80 wrap
+  autocmd FileType text,markdown            setlocal ts=4 sts=4 sw=4 et tw=80 wrap
 
   autocmd FileType html,xhtml,xml           setlocal ts=2 sts=2 sw=2 et
   autocmd FileType ruby,eruby,yaml          setlocal ts=2 sts=2 sw=2 et

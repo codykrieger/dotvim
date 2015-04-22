@@ -145,3 +145,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = git://github.com/fatih/vim-go.git
+[submodule "bundle/qmake-syntax-vim"]
+	path = bundle/qmake-syntax-vim
+	url = git://github.com/artoj/qmake-syntax-vim.git

@@ -208,6 +208,10 @@ if has("autocmd")
   autocmd FileType php noremap <C-L> :w!<CR>:!php -l %<CR>
 endif
 
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup END
+
 """""""""""""""""""""""""""""""""
 " # SHORTCUTS/MAPPINGS
 """""""""""""""""""""""""""""""""

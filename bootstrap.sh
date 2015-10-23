@@ -5,4 +5,3 @@ git clone git://github.com/codykrieger/dotvim.git ~/.vim
 cd ~/.vim
 
 ./tasks.sh install
-

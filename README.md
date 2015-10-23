@@ -95,4 +95,3 @@ molokai
 irblack
 vividchalk
 ```
-

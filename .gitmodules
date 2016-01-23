@@ -148,3 +148,6 @@
 [submodule "bundle/qmake-syntax-vim"]
 	path = bundle/qmake-syntax-vim
 	url = git://github.com/artoj/qmake-syntax-vim.git
+[submodule "bundle/you-complete-me"]
+	path = bundle/you-complete-me
+	url = git://github.com/Valloric/YouCompleteMe.git

@@ -124,7 +124,7 @@ set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 
-function! s:SetupWrapping()
+function! s:SetUpWrapping()
   set wrap
   set wrapmargin=2
   set textwidth=79
@@ -167,7 +167,7 @@ au BufRead,BufNewFile *.html.erb setlocal ft=eruby
 " Add json syntax highlighting
 au BufNewFile,BufRead *.json setlocal ft=json syntax=javascript
 
-au BufRead,BufNewFile *.txt call s:SetupWrapping()
+au BufRead,BufNewFile *.txt call s:SetUpWrapping()
 
 " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 au FileType python setlocal sts=4 ts=4 sw=4 tw=79

@@ -118,16 +118,16 @@ endif
 
 " Whitespace stuff
 set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 
 function! s:SetUpWrapping()
   set wrap
   set wrapmargin=2
-  set textwidth=79
+  set textwidth=80
 endfunction
 
 " allow backspacing over everything in insert mode
@@ -195,9 +195,9 @@ if has("autocmd")
   autocmd FileType php,javascript,css       setlocal ts=4 sts=4 sw=4 et
   autocmd FileType text,markdown            setlocal ts=4 sts=4 sw=4 et tw=80 wrap
 
-  autocmd FileType html,xhtml,xml           setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType html,xhtml,xml           setlocal ts=4 sts=4 sw=4 et
   autocmd FileType ruby,eruby,yaml          setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType scm,sml,lisp             setlocal ts=2 sts=2 sw=2 et tw=80 nowrap
+  autocmd FileType scm,sml,lisp             setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
 
   autocmd FileType changelog                setlocal ts=4 sts=4 sw=4 et tw=80 wrap
 

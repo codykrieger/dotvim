@@ -150,6 +150,10 @@ endif
 
 let g:syntastic_eruby_checkers = []
 
+" can help if saving .go files is slow:
+" let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
+" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+
 """""""""""""""""""""""""""""""""
 " # LANGUAGES/FILETYPES
 """""""""""""""""""""""""""""""""

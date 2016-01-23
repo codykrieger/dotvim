@@ -151,3 +151,6 @@
 [submodule "bundle/you-complete-me"]
 	path = bundle/you-complete-me
 	url = git://github.com/Valloric/YouCompleteMe.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git

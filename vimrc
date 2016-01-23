@@ -78,6 +78,7 @@ set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set wildignore+=*.eot,*.svg,*.ttf,*.woff,*.jpg,*.png,*.gif,*.swp,*.psd
 set wildignore+=*/tmp/*,*/Build/*,*/build/*
+set completeopt-=preview
 
 " Status bar
 set laststatus=2

@@ -3,7 +3,7 @@
 """""""""""""""""""""""""""""""""
 
 let g:pathogen_disabled = []
-let g:pathogen_disabled += ['vim-smartinput', 'nerdtree', 'vim-ruby', 'supertab'] ", 'closetag-vim', 'supertab']
+let g:pathogen_disabled += ['vim-smartinput', 'vim-ruby', 'supertab'] ", 'closetag-vim', 'supertab']
 
 " pathogen magic
 call pathogen#infect()

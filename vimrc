@@ -108,7 +108,7 @@ colorscheme molokai
 
 if has("gui_running")
   if has("mac")
-    set gfn=Menlo:h14
+    set gfn=Hack:h14
   endif
 endif
 

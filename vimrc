@@ -141,7 +141,7 @@ set autoindent
 set smartindent
 
 """""""""""""""""""""""""""""""""
-" # LINTING/STYLE CHECKING
+" # LINTING/STYLE CHECKING/AUTOCOMPLETE
 """""""""""""""""""""""""""""""""
 
 if filereadable("~/.rbenv/shims/ruby")
@@ -152,7 +152,9 @@ let g:syntastic_eruby_checkers = []
 
 " can help if saving .go files is slow:
 " let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['c', 'cpp', 'objc', 'objcpp'] }
+
+let g:ycm_filetype_blacklist = { 'c': 1, 'cpp': 1, 'objc': 1, 'objcpp': 1 }
 
 """""""""""""""""""""""""""""""""
 " # LANGUAGES/FILETYPES

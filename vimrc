@@ -207,6 +207,8 @@ if has("autocmd")
 
   autocmd FileType changelog                setlocal ts=4 sts=4 sw=4 et tw=80 wrap
 
+  autocmd FileType vim                      setlocal nowrap
+
   " language-specific general settings
 
   " run file

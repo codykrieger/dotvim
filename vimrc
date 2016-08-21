@@ -2,6 +2,8 @@
 " # PATHOGEN
 """""""""""""""""""""""""""""""""
 
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+
 let g:pathogen_disabled = []
 let g:pathogen_disabled += ['vim-smartinput', 'vim-ruby', 'supertab'] ", 'closetag-vim', 'supertab']
 

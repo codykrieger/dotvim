@@ -160,3 +160,6 @@
 [submodule "bundle/vim-terraform"]
 	path = bundle/vim-terraform
 	url = git://github.com/hashivim/vim-terraform.git
+[submodule "bundle/vim-pathogen"]
+	path = bundle/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen.git

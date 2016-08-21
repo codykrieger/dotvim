@@ -157,3 +157,6 @@
 [submodule "bundle/ultisnips"]
 	path = bundle/ultisnips
 	url = git://github.com/SirVer/ultisnips.git
+[submodule "bundle/vim-terraform"]
+	path = bundle/vim-terraform
+	url = git://github.com/hashivim/vim-terraform.git

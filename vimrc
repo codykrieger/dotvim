@@ -28,6 +28,7 @@ set timeoutlen=500
 
 " Scrolling. Text selection.
 set mouse=a
+set ttymouse=xterm2
 
 " We don't like vi
 set nocompatible
@@ -151,7 +152,7 @@ if filereadable("~/.rbenv/shims/ruby")
 endif
 
 let g:syntastic_eruby_checkers = []
-let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+let g:syntastic_go_checkers = ['go', 'govet']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['c', 'cpp', 'objc', 'objcpp'] }
 
 let g:ycm_filetype_blacklist = { 'c': 1, 'cpp': 1, 'objc': 1, 'objcpp': 1 }
@@ -167,7 +168,7 @@ filetype plugin indent on
 au FileType make setlocal noexpandtab
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    setlocal ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,Hulafile}    setlocal ft=ruby
 au BufRead,BufNewFile *.html.erb setlocal ft=eruby
 
 " Add json syntax highlighting

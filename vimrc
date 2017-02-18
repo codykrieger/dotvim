@@ -136,15 +136,15 @@ set smartindent
 " # LINTING/STYLE CHECKING/AUTOCOMPLETE
 """""""""""""""""""""""""""""""""
 
-if filereadable("~/.rbenv/shims/ruby")
-  let g:syntastic_ruby_exec = '~/.rbenv/shims/ruby'
+if has("nvim")
+    let g:deoplete#enable_at_startup = 1
+
+    " Allow Tab key to shuffle through the completion popup
+    inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
+
+    " Close the documentation window when completion is done
+    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 endif
-
-let g:syntastic_eruby_checkers = []
-let g:syntastic_go_checkers = ['go', 'govet']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['c', 'cpp', 'objc', 'objcpp'] }
-
-let g:ycm_filetype_blacklist = { 'c': 1, 'cpp': 1, 'objc': 1, 'objcpp': 1 }
 
 """""""""""""""""""""""""""""""""
 " # LANGUAGES/FILETYPES

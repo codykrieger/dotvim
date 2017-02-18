@@ -142,9 +142,12 @@
 [submodule "bundle/tagbar"]
 	path = pack/default/start/tagbar
 	url = git://github.com/majutsushi/tagbar.git
-[submodule "bundle/ultisnips"]
-	path = pack/default/start/ultisnips
-	url = git://github.com/SirVer/ultisnips.git
 [submodule "bundle/vim-terraform"]
 	path = pack/default/start/vim-terraform
 	url = git://github.com/hashivim/vim-terraform.git
+[submodule "pack/default/start/deoplete.nvim"]
+	path = pack/default/start/deoplete.nvim
+	url = git://github.com/Shougo/deoplete.nvim.git
+[submodule "pack/default/start/deoplete-go"]
+	path = pack/default/start/deoplete-go
+	url = git://github.com/zchee/deoplete-go.git

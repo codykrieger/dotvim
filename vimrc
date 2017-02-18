@@ -236,11 +236,13 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Unimpaired configuration
 " Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
+map <C-N> [e
+map <C-M> ]e
+imap <C-N> <C-O>[e
+imap <C-M> <C-O>]e
 " Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
+vmap <C-N> [egv
+vmap <C-M> ]egv
 
 " NERDCommenter
 map <Leader>/ <plug>NERDCommenterToggle

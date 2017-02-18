@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+echo "  -> Checking out submodules..."
+git submodule update --init --recursive
+
+echo "  -> Ignoring documentation content in submodules..."
+for i in $(git submodule | tr -s ' ' | cut -d ' ' -f 3)
+do
+    git config submodule.$i.ignore untracked
+done
+
+echo "  -> Linking ~/.vimrc, ~/.gvimrc, and ~/.config/nvim..."
+[[ -L $HOME/.vimrc ]] || ln -vs $ROOT_DIR/vimrc $HOME/.vimrc
+[[ -L $HOME/.gvimrc ]] || ln -vs $ROOT_DIR/gvimrc $HOME/.gvimrc
+if [[ ! -L $HOME/.config/nvim ]] ; then
+    mkdir -vp $HOME/.config
+    ln -vs $ROOT_DIR $HOME/.config/nvim
+fi
+
+echo -e "  \033[32m √ Done bootstrapping vim config!\033[0m"

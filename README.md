@@ -4,7 +4,7 @@ A modern, lightweight configuration for neovim and vim 8.0+.
 
 ## prerequisites
 
-- neovim + the python3 neovim bindings (i.e. `pip3 install neovim`); or
+- neovim + the python2/3 neovim bindings
 - vim 8.0+ configured `--with-lua`, `--with-python3`, and `--with-cscope`
 
 _Note that the bad ass asynchronous autocomplete functionality of this
@@ -17,6 +17,9 @@ neovim:
 
 ```bash
 brew install neovim/neovim/neovim # yes, three times
+brew install python python3
+pip2 install neovim
+pip3 install neovim
 ```
 
 vim:

@@ -10,6 +10,21 @@ A modern, lightweight configuration for neovim and vim 8.0+.
 _Note that the bad ass asynchronous autocomplete functionality of this
 configuration currently only works with **neovim**._
 
+If you're on macOS, the easiest way to acquire the right versions of things is
+to use [Homebrew][homebrew]:
+
+neovim:
+
+```
+brew install neovim/neovim/neovim # yes, three times
+```
+
+vim:
+
+```
+brew install vim --with-lua --with-python3 # you get --with-cscope for free
+```
+
 ## installing
 
 ```
@@ -41,3 +56,5 @@ curl https://raw.githubusercontent.com/codykrieger/dotvim/master/bootstrap.sh -o
 - `ctrl-a` to jump to the beginning and `ctrl-e` to jump to the end of a line in
   command mode, just like in a shell
 - `gp` to select the thing you just changed (or pasted) when in normal mode
+
+[homebrew]: https://brew.sh

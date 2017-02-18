@@ -15,13 +15,13 @@ to use [Homebrew][homebrew]:
 
 neovim:
 
-```
+```bash
 brew install neovim/neovim/neovim # yes, three times
 ```
 
 vim:
 
-```
+```bash
 brew install vim --with-lua --with-python3 # you get --with-cscope for free
 ```
 

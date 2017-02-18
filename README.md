@@ -20,13 +20,13 @@ curl https://raw.githubusercontent.com/codykrieger/dotvim/master/bootstrap.sh -o
 
 ### notable features
 
-- Leader set to comma (,), not backslash (\\)
+- Leader set to comma `,`, not backslash `\`
 - Syntax-aware auto-indent
 - Sane default tab/space and tab width settings for tons of different languages
-- (Asynchronous!) source code linting and autocomplete for a bunch of languages
+- (_Asynchronous!_) source code linting and autocomplete for a bunch of languages
 - Remembers last location in a given file
-- ~/.vim/backup directory for holding .swp files, rather than littering them all
-  over your filesystem
+- `~/.vim/backup` directory for holding `.swp` files, rather than littering them
+  all over your filesystem
 - Allows overrides in `~/.vimrc.local` for stuff you don't want to check in to
   source control
 

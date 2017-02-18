@@ -15,7 +15,9 @@ set timeoutlen=500
 
 " Scrolling. Text selection.
 set mouse=a
-set ttymouse=xterm2
+if !has("nvim")
+    set ttymouse=xterm2
+endif
 
 " We don't like vi
 set nocompatible

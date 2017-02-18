@@ -1,97 +1,43 @@
-Super Awesome Vim Files (tm)
-============================
+# dotvim
 
-Essentially a slimmed down [Janus](/carlhuda/janus), managed with
-[Pathogen](/tpope/vim-pathogen). See below for a list of plugins,
-customizations and color schemes.
+A modern, lightweight configuration for neovim and vim 8.0+.
 
-Installing
-==========
+## prerequisites
 
-Bootstrap'd!
+- neovim + the python3 neovim bindings (i.e. `pip3 install neovim`); or
+- vim 8.0+ configured `--with-lua`, `--with-python3`, and `--with-cscope`
+
+_Note that the bad ass asynchronous autocomplete functionality of this
+configuration currently only works with *neovim*._
+
+## installing
 
 ```
 curl https://raw.githubusercontent.com/codykrieger/dotvim/master/bootstrap.sh -o - | sh
 ```
 
-In most cases, that'll do it! If you've got gvim/macvim installed, even better.
+## what makes this vim config special
 
-Plugins & Customizations
-========================
-
-## Plugins
-
-```
-ack            # for ack-ing within a project
-align          # for auto-aligning assignment statements, etc.
-closetag-vim   # for auto-closing html, xml tags
-ctrlp          # textmate-like fuzzy file quick-open thingy. mapped to <super>t and ctrl-p
-endwise        # auto-insert end keyword in ruby
-fugitive       # for working with git in vim
-gist           # create github gists right from within vim!
-git            # MORE GIT
-indent-object  # represents code at the same indent level as an object
-nerdcommenter  # awesome automagical commenting plugin, mapped to <leader>/
-nerdtree       # project drawer! hide/show mapped to <leader>n
-rails          # if you're not using this with rails, you're doing it wrong (tm)
-snipmate       # textmate-like snippets
-supertab       # SUPERTAB!!!!!
-surround       # quoting/parenthesizing made simple
-unimpaired     # handy bracket mappings
-zencoding      # awesome html fanciness, look it up
-```
-
-## Syntaxes
-
-```
-coffee-script
-cucumber
-haml
-jade
-javascript
-markdown
-mustache
-puppet
-rspec
-ruby (updated)
-scala
-slim
-stylus
-textile
-```
-
-## Customizations
+### notable features
 
 - Leader set to comma (,), not backslash (\\)
-- Status bar on
-- Ruler on (col/row display in status bar)
-- Default tabs set to spaces, width 2
+- Syntax-aware auto-indent
+- Sane default tab/space and tab width settings for tons of different languages
+- (Asynchronous!) source code linting and autocomplete for a bunch of languages
 - Remembers last location in a given file
-- Real tabs for Makefiles
-- 4-space tabs for Python files
-- Automagical, syntax-aware auto-indent
-- \<leader\>e autocompletion to the current dir to edit a file
-- \<leader\>te autocompletion to the current dir to edit a file in a new
-  tab
-- ctrl-up and ctrl-down to "bubble" lines up and down in normal and
-  visual modes
-- F1 remapped to :nohl to turn off search highlighting when you're done
-  searching
-- ~/.vim/backup directory for holding .swp files
-- ctrl-k for deleting lines (dd command)
-- \<leader\>tn to switch to the next tab, \<leader\>tp for previous tab
+- ~/.vim/backup directory for holding .swp files, rather than littering them all
+  over your filesystem
+- Allows overrides in `~/.vimrc.local` for stuff you don't want to check in to
+  source control
 
-That's most of it. The rest of the customizations are mainly GUI tweaks,
-etc. Take a look at the vimrc/gvimrc files for more info. They're pretty
-decently commented.
+### helpful keybindings
 
-Color Schemes
-=============
-
-```
-solarized (default)
-color-sampler-pack
-molokai
-irblack
-vividchalk
-```
+- `ctrl-n` and `ctrl-m` for "bubbling" lines of text up and down, respectively,
+  in normal, insert, and visual modes (via the _unimpaired_ plug-in)
+- `ctrl-k` for deleting lines (i.e. `dd`)
+- `F1` remapped to `:nohl` to turn off search highlighting
+- `<leader>e` autocompletion to the current dir to edit a file
+- `<leader>te` autocompletion to the current dir to edit a file in a new tab
+- `ctrl-a` to jump to the beginning and `ctrl-e` to jump to the end of a line in
+  command mode, just like in a shell
+- `gp` to select the thing you just changed (or pasted) when in normal mode

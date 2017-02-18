@@ -8,7 +8,7 @@ A modern, lightweight configuration for neovim and vim 8.0+.
 - vim 8.0+ configured `--with-lua`, `--with-python3`, and `--with-cscope`
 
 _Note that the bad ass asynchronous autocomplete functionality of this
-configuration currently only works with *neovim*._
+configuration currently only works with **neovim**._
 
 ## installing
 

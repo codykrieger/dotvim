@@ -67,51 +67,27 @@
 [submodule "bundle/closetag-vim"]
 	path = pack/default/start/closetag-vim
 	url = git://github.com/vim-scripts/closetag.vim.git
-[submodule "bundle/vim-jade"]
-	path = pack/default/start/vim-jade
-	url = git://github.com/digitaltoad/vim-jade.git
-[submodule "bundle/vim-stylus"]
-	path = pack/default/start/vim-stylus
-	url = git://github.com/wavded/vim-stylus.git
 [submodule "bundle/ctrlp.vim"]
 	path = pack/default/start/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/vim-handlebars"]
-	path = pack/default/start/vim-handlebars
-	url = git://github.com/nono/vim-handlebars.git
 [submodule "bundle/vim-rspec"]
 	path = pack/default/start/vim-rspec
 	url = git://github.com/thoughtbot/vim-rspec.git
 [submodule "bundle/vim-detailed"]
 	path = pack/default/start/vim-detailed
 	url = git://github.com/rking/vim-detailed.git
-[submodule "bundle/salt-vim"]
-	path = pack/default/start/salt-vim
-	url = git://github.com/saltstack/salt-vim.git
 [submodule "bundle/html5.vim"]
 	path = pack/default/start/html5.vim
 	url = git://github.com/othree/html5.vim.git
 [submodule "bundle/vim-glsl"]
 	path = pack/default/start/vim-glsl
 	url = git://github.com/tikhomirov/vim-glsl.git
-[submodule "bundle/emmet-vim"]
-	path = pack/default/start/emmet-vim
-	url = git://github.com/mattn/emmet-vim.git
 [submodule "bundle/vim-swift"]
 	path = pack/default/start/vim-swift
 	url = git://github.com/toyamarinyon/vim-swift.git
 [submodule "bundle/syntastic"]
 	path = pack/default/opt/syntastic
 	url = git://github.com/scrooloose/syntastic.git
-[submodule "bundle/tlib_vim"]
-	path = pack/default/start/tlib_vim
-	url = git://github.com/tomtom/tlib_vim.git
-[submodule "bundle/vim-addon-mw-utils"]
-	path = pack/default/start/vim-addon-mw-utils
-	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
-[submodule "bundle/vim-snipmate"]
-	path = pack/default/start/vim-snipmate
-	url = git://github.com/garbas/vim-snipmate.git
 [submodule "bundle/vim-go"]
 	path = pack/default/start/vim-go
 	url = git://github.com/fatih/vim-go.git

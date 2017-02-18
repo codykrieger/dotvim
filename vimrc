@@ -265,16 +265,6 @@ imap <C-K>      <C-O>dd
 " Select the just-changed (works for just-pasted) text
 nnoremap gp `[v`]
 
-" Format the current paragraph according to
-" the current 'textwidth' with CTRL-J:
-nmap <C-J>      gqap
-vmap <C-J>      gq
-imap <C-J>      <C-O>gqap
-
-" Tabs
-map <Leader>tp :tabp<CR>
-map <Leader>tn :tabnext<CR>
-
 " Bash-like home/end key mappings
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>

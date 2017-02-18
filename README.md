@@ -4,7 +4,7 @@ A modern, lightweight configuration for neovim and vim 8.0+.
 
 ## prerequisites
 
-- neovim + the python2/3 neovim bindings
+- neovim + the python2/3 neovim bindings; OR
 - vim 8.0+ configured `--with-lua`, `--with-python3`, and `--with-cscope`
 
 _Note that the bad ass asynchronous autocomplete functionality of this

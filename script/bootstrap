@@ -21,4 +21,9 @@ if [[ ! -L $HOME/.config/nvim ]] ; then
     ln -vs $ROOT_DIR $HOME/.config/nvim
 fi
 
+if which nvim 2>&1 > /dev/null ; then
+    echo "  -> Poking neovim to update remote plug-ins..."
+    nvim +UpdateRemotePlugins +qall
+fi
+
 echo -e "  \033[32m √ Done bootstrapping vim config!\033[0m"

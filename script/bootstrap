@@ -21,6 +21,13 @@ if [[ ! -L $HOME/.config/nvim ]] ; then
     ln -vs $ROOT_DIR $HOME/.config/nvim
 fi
 
+DEOCOMPLETE_GO_DIR=$ROOT_DIR/pack/default/start/deoplete-go
+
+if [[ -d "$DEOCOMPLETE_GO_DIR" ]] ; then
+    echo "  -> Building native plug-in for deocomplete-go..."
+    make -C $DEOCOMPLETE_GO_DIR
+fi
+
 if which nvim 2>&1 > /dev/null ; then
     echo "  -> Poking neovim to update remote plug-ins..."
     nvim +UpdateRemotePlugins +qall

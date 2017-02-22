@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+
+echo "  -> Updating submodules..."
+git submodule foreach 'git checkout master && git pull'
+
+echo "  -> Ignoring documentation content in submodules..."
+for i in $(git submodule | tr -s ' ' | cut -d ' ' -f 3)
+do
+    git config submodule.$i.ignore untracked
+done
+
+echo -e "  \033[32m √ Done!\033[0m"

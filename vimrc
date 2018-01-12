@@ -186,18 +186,18 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd} setlocal ft=markdown
 
 if has("autocmd")
   " language-specific indentation settings
-  autocmd FileType c,cpp                    setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
-  autocmd FileType sh,csh,tcsh,zsh          setlocal ts=4 sts=4 sw=4 et
-  autocmd FileType php,javascript,css       setlocal ts=4 sts=4 sw=4 et
-  autocmd FileType text,markdown            setlocal ts=4 sts=4 sw=4 et tw=80 wrap
+  autocmd FileType c,cpp                      setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
+  autocmd FileType sh,csh,tcsh,zsh            setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType php,javascript,css         setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType text,markdown              setlocal ts=4 sts=4 sw=4 et tw=80 wrap
 
-  autocmd FileType html,xhtml,xml           setlocal ts=4 sts=4 sw=4 et
-  autocmd FileType ruby,eruby,yaml          setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType scm,sml,lisp             setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
+  autocmd FileType html,xhtml,xml,gohtmltmpl  setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType ruby,eruby,yaml            setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType scm,sml,lisp               setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
 
-  autocmd FileType changelog                setlocal ts=4 sts=4 sw=4 et tw=80 wrap
+  autocmd FileType changelog                  setlocal ts=4 sts=4 sw=4 et tw=80 wrap
 
-  autocmd FileType vim                      setlocal nowrap
+  autocmd FileType vim                        setlocal nowrap
 
   " language-specific general settings
 

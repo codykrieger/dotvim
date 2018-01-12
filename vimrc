@@ -67,7 +67,7 @@ set whichwrap=bs<>[]
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor,node_modules
 set wildignore+=*.eot,*.svg,*.ttf,*.woff,*.jpg,*.png,*.gif,*.swp,*.psd
 set wildignore+=*/tmp/*,*/Build/*,*/build/*
 set completeopt-=preview

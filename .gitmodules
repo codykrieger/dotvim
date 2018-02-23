@@ -115,3 +115,6 @@
 [submodule "pack/default/start/vim-ps1"]
 	path = pack/default/start/vim-ps1
 	url = git://github.com/PProvost/vim-ps1.git
+[submodule "pack/default/start/apiblueprint.vim"]
+	path = pack/default/start/apiblueprint.vim
+	url = git://github.com/kylef/apiblueprint.vim.git

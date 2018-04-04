@@ -121,3 +121,6 @@
 [submodule "pack/default/start/vim-jsx"]
 	path = pack/default/start/vim-jsx
 	url = git://github.com/mxw/vim-jsx.git
+[submodule "pack/default/start/vim-vue"]
+	path = pack/default/start/vim-vue
+	url = git://github.com/posva/vim-vue.git

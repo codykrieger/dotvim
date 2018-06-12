@@ -96,6 +96,8 @@ set showcmd
 syntax on
 syntax enable
 
+set termguicolors
+
 colorscheme molokai
 
 if has("gui_running")

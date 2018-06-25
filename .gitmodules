@@ -124,3 +124,6 @@
 [submodule "pack/default/start/vim-vue"]
 	path = pack/default/start/vim-vue
 	url = git://github.com/posva/vim-vue.git
+[submodule "pack/default/start/typescript-vim"]
+	path = pack/default/start/typescript-vim
+	url = git://github.com/leafgarland/typescript-vim.git

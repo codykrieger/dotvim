@@ -124,3 +124,6 @@
 [submodule "pack/default/start/typescript-vim"]
 	path = pack/default/start/typescript-vim
 	url = git://github.com/leafgarland/typescript-vim.git
+[submodule "pack/default/start/ctrlp.vim"]
+	path = pack/default/start/ctrlp.vim
+	url = git://github.com/ctrlpvim/ctrlp.vim.git

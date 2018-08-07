@@ -67,9 +67,6 @@
 [submodule "bundle/closetag-vim"]
 	path = pack/default/start/closetag-vim
 	url = git://github.com/vim-scripts/closetag.vim.git
-[submodule "bundle/ctrlp.vim"]
-	path = pack/default/start/ctrlp.vim
-	url = git://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "bundle/vim-rspec"]
 	path = pack/default/start/vim-rspec
 	url = git://github.com/thoughtbot/vim-rspec.git

@@ -96,7 +96,9 @@ set showcmd
 syntax on
 syntax enable
 
-set termguicolors
+if $TMUX != ''
+    set termguicolors
+endif
 
 colorscheme molokai
 

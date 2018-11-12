@@ -127,3 +127,6 @@
 [submodule "pack/default/start/ctrlp.vim"]
 	path = pack/default/start/ctrlp.vim
 	url = git://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "pack/default/start/vim-graphql"]
+	path = pack/default/start/vim-graphql
+	url = git://github.com/jparise/vim-graphql.git

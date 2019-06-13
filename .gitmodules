@@ -126,7 +126,13 @@
 	url = git://github.com/leafgarland/typescript-vim.git
 [submodule "pack/default/start/ctrlp.vim"]
 	path = pack/default/start/ctrlp.vim
-	url = git://github.com/ctrlpvim/ctrlp.vim.git
+	url = git://github.com/kien/ctrlp.vim.git
 [submodule "pack/default/start/vim-graphql"]
 	path = pack/default/start/vim-graphql
 	url = git://github.com/jparise/vim-graphql.git
+[submodule "pack/default/start/fzf"]
+	path = pack/default/start/fzf
+	url = git://github.com/junegunn/fzf.git
+[submodule "pack/default/start/fzf.vim"]
+	path = pack/default/start/fzf.vim
+	url = git://github.com/junegunn/fzf.vim.git

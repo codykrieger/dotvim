@@ -187,6 +187,7 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd} setlocal ft=markdown
+au BufRead,BufNewFile *.svelte setlocal ft=html
 
 if has("autocmd")
   " language-specific indentation settings

@@ -133,3 +133,6 @@
 [submodule "pack/default/start/fzf.vim"]
 	path = pack/default/start/fzf.vim
 	url = git://github.com/junegunn/fzf.vim.git
+[submodule "pack/default/start/julia-vim"]
+	path = pack/default/start/julia-vim
+	url = git://github.com/JuliaEditorSupport/julia-vim.git

@@ -19,6 +19,9 @@ if !has("nvim")
     set ttymouse=xterm2
 endif
 
+" Copy/paste!
+set clipboard=unnamed
+
 " We don't like vi
 set nocompatible
 

@@ -16,7 +16,7 @@ hi CursorLine cterm=none ctermbg=236
 hi Function ctermfg=114
 hi Identifier ctermfg=73
 hi NonText ctermfg=23
-hi Normal ctermbg=235 ctermfg=254
+hi Normal ctermbg=234 ctermfg=254
 hi Number ctermfg=179
 hi PreCondit ctermfg=208
 hi PreProc ctermfg=208
@@ -29,4 +29,4 @@ hi ErrorMsg          cterm=standout ctermbg=none
 hi SpellBad          cterm=standout ctermbg=none
 hi NvimInternalError cterm=standout ctermbg=none
 
-hi MatchParen ctermbg=226 ctermfg=235
+hi MatchParen ctermbg=226 ctermfg=234

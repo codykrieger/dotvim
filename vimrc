@@ -297,6 +297,14 @@ let g:gist_open_browser_after_post = 1
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
 
+nmap <leader>sp :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 """""""""""""""""""""""""""""""""
 " # GUI STUFF
 """""""""""""""""""""""""""""""""

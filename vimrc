@@ -96,20 +96,22 @@ set showcmd
 """""""""""""""""""""""""""""""""
 
 " Syntax highlighting!
+set t_Co=256
+
+if empty($TMUX)
+    if has("nvim")
+        "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+        let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    endif
+    if has("+termguicolors")
+        set termguicolors
+    endif
+endif
+
 syntax on
 syntax enable
 
-if $TMUX != ''
-    set termguicolors
-endif
-
-colorscheme molokai
-
-if has("gui_running")
-  if has("mac")
-    set gfn=Hack:h14
-  endif
-endif
+colorscheme xcodedark
 
 """""""""""""""""""""""""""""""""
 " # TEXT, TABS, INDENTATION, ETC.
@@ -313,11 +315,6 @@ endfunc
 set modeline
 " Only look at this number of lines for modeline
 set modelines=10
-
-set t_Co=256
-if has("gui_running") || $TERM=="xterm-256color"
-  set guioptions-=T
-endif
 
 """""""""""""""""""""""""""""""""
 " # LOCAL VIM CONFIG

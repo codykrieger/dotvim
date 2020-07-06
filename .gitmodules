@@ -136,3 +136,6 @@
 [submodule "pack/default/start/julia-vim"]
 	path = pack/default/start/julia-vim
 	url = git://github.com/JuliaEditorSupport/julia-vim.git
+[submodule "pack/default/start/vim-wren"]
+	path = pack/default/start/vim-wren
+	url = git://github.com/lluchs/vim-wren.git

@@ -139,3 +139,6 @@
 [submodule "pack/default/start/vim-wren"]
 	path = pack/default/start/vim-wren
 	url = git://github.com/lluchs/vim-wren.git
+[submodule "pack/default/start/vim-skill"]
+	path = pack/default/start/vim-skill
+	url = git://github.com/rbzentrum/vim-skill.git

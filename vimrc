@@ -281,9 +281,13 @@ nnoremap gp `[v`]
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
 
-" Map fzf to Ctrl-P for fuzzy file finding \o/
+" Map fzf to Ctrl-P for fuzzy file finding via fzf \o/
 imap <C-P> <C-O>:Files<CR>
 nmap <C-P> :Files<CR>
+
+" Map :Rg to Ctrl-L for find-in-project via fzf-vim and ripgrep
+imap <C-L> <C-O>:Rg 
+nmap <C-L> :Rg 
 
 " MacVIM shift+arrow-keys behavior (required in .vimrc)
 let macvim_hig_shift_movement = 1

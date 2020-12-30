@@ -233,6 +233,11 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+" NERDCommenter configuration
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDCustomDelimiters = { 'c': { 'left': '//', 'right': '', 'leftAlt': '/*', 'rightAlt': '*/' } }
+
 """""""""""""""""""""""""""""""""
 " # SHORTCUTS/MAPPINGS
 """""""""""""""""""""""""""""""""

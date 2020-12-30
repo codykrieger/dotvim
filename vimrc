@@ -169,6 +169,7 @@ au FileType make setlocal noexpandtab
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,Hulafile,Zosofile,Tridentfile,Podfile} setlocal ft=ruby
 au BufRead,BufNewFile *.trident setlocal ft=ruby
+au BufRead,BufNewFile *.rbi setlocal ft=ruby
 au BufRead,BufNewFile *.html.erb setlocal ft=eruby
 
 " Add json syntax highlighting

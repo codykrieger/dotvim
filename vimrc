@@ -236,6 +236,7 @@ let g:go_highlight_build_constraints = 1
 " NERDCommenter configuration
 let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
+let g:NERDDefaultAlign = 'left'
 let g:NERDCustomDelimiters = { 'c': { 'left': '//', 'right': '', 'leftAlt': '/*', 'rightAlt': '*/' } }
 
 """""""""""""""""""""""""""""""""

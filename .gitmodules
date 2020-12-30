@@ -12,7 +12,7 @@
 	url = git://github.com/wycats/nerdtree.git
 [submodule "bundle/nerdcommenter"]
 	path = pack/default/start/nerdcommenter
-	url = git://github.com/ddollar/nerdcommenter.git
+	url = git://github.com/preservim/nerdcommenter.git
 [submodule "bundle/surround"]
 	path = pack/default/start/surround
 	url = git://github.com/tpope/vim-surround.git

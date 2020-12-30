@@ -185,6 +185,8 @@ au FileType glsl setlocal ts=4 sts=4 sw=4 et tw=79
 au FileType {objc,objcpp} setlocal ts=4 sts=4 sw=4 et
 au BufNewFile,BufRead *.m setlocal ft=objc
 
+au BufRead,BufNewFile *.ksy setlocal ft=yaml sw=2
+
 au FileType go set noexpandtab
 au FileType go nmap <Leader>gr <Plug>(go-rename)
 au FileType go nmap <Leader>gi <Plug>(go-info)

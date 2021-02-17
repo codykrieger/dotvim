@@ -199,6 +199,8 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd} setlocal ft=markdown
 au BufRead,BufNewFile *.svelte setlocal ft=html
 
+au BufNewFile,BufRead *.tsx,*.jsx set ft=typescriptreact
+
 if has("autocmd")
   " language-specific indentation settings
   autocmd FileType c,cpp                      setlocal ts=4 sts=4 sw=4 et tw=80 nowrap

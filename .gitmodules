@@ -145,3 +145,6 @@
 [submodule "pack/default/start/vim-jsx-typescript"]
 	path = pack/default/start/vim-jsx-typescript
 	url = git://github.com/peitalin/vim-jsx-typescript.git
+[submodule "pack/default/start/zig.vim"]
+	path = pack/default/start/zig.vim
+	url = git://github.com/ziglang/zig.vim.git

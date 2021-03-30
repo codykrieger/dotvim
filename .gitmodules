@@ -148,3 +148,6 @@
 [submodule "pack/default/start/nvim-lspconfig"]
 	path = pack/default/start/nvim-lspconfig
 	url = git://github.com/neovim/nvim-lspconfig.git
+[submodule "pack/default/start/deoplete-lsp"]
+	path = pack/default/start/deoplete-lsp
+	url = git://github.com/deoplete-plugins/deoplete-lsp.git

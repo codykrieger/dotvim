@@ -148,3 +148,6 @@
 [submodule "pack/default/start/zig.vim"]
 	path = pack/default/start/zig.vim
 	url = git://github.com/ziglang/zig.vim.git
+[submodule "pack/default/start/nvim-lspconfig"]
+	path = pack/default/start/nvim-lspconfig
+	url = git://github.com/neovim/nvim-lspconfig.git

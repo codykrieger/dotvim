@@ -147,7 +147,10 @@ set smartindent
 
 if has("nvim")
     let g:deoplete#enable_at_startup = 1
-    let g:deoplete#sources#go#gocode_binary = $HOME.'/bin/gocode-gomod'
+
+    lua << EOF
+require'lspconfig'.gopls.setup{}
+EOF
 
     " Allow Tab key to shuffle through the completion popup
     inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()

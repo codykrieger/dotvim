@@ -97,9 +97,6 @@
 [submodule "pack/default/start/deoplete.nvim"]
 	path = pack/default/start/deoplete.nvim
 	url = git://github.com/Shougo/deoplete.nvim.git
-[submodule "pack/default/start/deoplete-go"]
-	path = pack/default/start/deoplete-go
-	url = git://github.com/zchee/deoplete-go.git
 [submodule "pack/default/start/deoplete-ruby"]
 	path = pack/default/start/deoplete-ruby
 	url = git://github.com/fishbullet/deoplete-ruby.git

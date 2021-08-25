@@ -91,9 +91,6 @@
 [submodule "bundle/qmake-syntax-vim"]
 	path = pack/default/start/qmake-syntax-vim
 	url = git://github.com/artoj/qmake-syntax-vim.git
-[submodule "bundle/vim-terraform"]
-	path = pack/default/start/vim-terraform
-	url = git://github.com/hashivim/vim-terraform.git
 [submodule "pack/default/start/deoplete.nvim"]
 	path = pack/default/start/deoplete.nvim
 	url = git://github.com/Shougo/deoplete.nvim.git
@@ -148,3 +145,6 @@
 [submodule "pack/default/start/deoplete-lsp"]
 	path = pack/default/start/deoplete-lsp
 	url = git://github.com/deoplete-plugins/deoplete-lsp.git
+[submodule "pack/default/start/vim-hcl"]
+	path = pack/default/start/vim-hcl
+	url = git://github.com/jvirtanen/vim-hcl.git

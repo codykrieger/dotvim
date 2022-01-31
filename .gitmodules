@@ -100,9 +100,6 @@
 [submodule "pack/default/start/rust.vim"]
 	path = pack/default/start/rust.vim
 	url = git://github.com/rust-lang/rust.vim.git
-[submodule "pack/default/start/vim-toml"]
-	path = pack/default/start/vim-toml
-	url = git://github.com/cespare/vim-toml.git
 [submodule "pack/default/start/vim-ps1"]
 	path = pack/default/start/vim-ps1
 	url = git://github.com/PProvost/vim-ps1.git

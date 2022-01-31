@@ -3,7 +3,7 @@
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 echo "  -> Updating submodules..."
-git submodule foreach 'git checkout master && git pull'
+git submodule foreach 'git fetch --prune && git checkout origin/HEAD'
 
 echo "  -> Ignoring documentation content in submodules..."
 for i in $(git submodule | tr -s ' ' | cut -d ' ' -f 3)

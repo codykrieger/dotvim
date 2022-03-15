@@ -7,7 +7,7 @@ main() {
         [ -e $i ] && mv $i $i.old
     done
 
-    git clone git://github.com/codykrieger/dotvim.git ~/.vim
+    git clone git@github.com:codykrieger/dotvim.git ~/.vim
 
     cd ~/.vim
     script/bootstrap

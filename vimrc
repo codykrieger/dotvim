@@ -190,10 +190,19 @@ if has("nvim")
             -- This is the default in Nvim 0.7+:
             -- debounce_text_changes = 150,
         }
+        require('lspconfig')['svelte'].setup{
+            on_attach = on_attach,
+            flags = lsp_flags,
+        }
+        require('lspconfig')['tsserver'].setup{
+            on_attach = on_attach,
+            flags = lsp_flags,
+        }
+        require('lspconfig')['zls'].setup{
+            on_attach = on_attach,
+            flags = lsp_flags,
+        }
         require('lspconfig')['gopls'].setup{
-            cmd = {"gopls", "serve"},
-            filetypes = {"go", "gomod"},
-            root_dir = util.root_pattern("go.work", "go.mod", ".git"),
             on_attach = on_attach,
             flags = lsp_flags,
             settings = {
@@ -206,11 +215,8 @@ if has("nvim")
                 },
             }
         }
-        require('lspconfig')['zls'].setup{
-            on_attach = on_attach,
-            flags = lsp_flags,
-        }
         require('lspconfig')['rust_analyzer'].setup{
+            root_dir = util.root_pattern("Cargo.toml", ".git"),
             on_attach = on_attach,
             flags = lsp_flags,
             settings = {

@@ -146,8 +146,6 @@ set smartindent
 """""""""""""""""""""""""""""""""
 
 if has("nvim")
-    let g:deoplete#enable_at_startup = 1
-
     " The following Lua snippet was copied pretty much verbatim from:
     " https://github.com/neovim/nvim-lspconfig#suggested-configuration
 
@@ -234,13 +232,32 @@ if has("nvim")
                 }
             }
         }
+
+        vim.cmd [[
+            call ddc#custom#patch_global('sourceOptions', {
+                \ '_': {
+                \   'matchers': ['matcher_head'],
+                \   'sorters': ['sorter_rank']},
+                \ })
+
+            call ddc#custom#patch_global('sources', ['nvim-lsp'])
+            call ddc#custom#patch_global('sourceOptions', {
+                \ 'nvim-lsp': {
+                \   'mark': 'lsp',
+                \   'forceCompletionPattern': '\.\w*|:\w*|->\w*' },
+                \ })
+
+            inoremap <silent><expr> <TAB>
+                \ ddc#map#pum_visible() ? '<C-n>' :
+                \ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
+                \ '<TAB>' : ddc#map#manual_complete()
+
+            " <S-TAB>: completion back.
+            inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
+
+            call ddc#enable()
+        ]]
 EOF
-
-    " Allow Tab key to shuffle through the completion popup
-    inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
-
-    " Close the documentation window when completion is done
-    autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 endif
 
 """""""""""""""""""""""""""""""""

@@ -94,9 +94,6 @@
 [submodule "bundle/vim-terraform"]
 	path = pack/default/start/vim-terraform
 	url = git@github.com:hashivim/vim-terraform.git
-[submodule "pack/default/start/deoplete.nvim"]
-	path = pack/default/start/deoplete.nvim
-	url = git@github.com:Shougo/deoplete.nvim.git
 [submodule "pack/default/start/rust.vim"]
 	path = pack/default/start/rust.vim
 	url = git@github.com:rust-lang/rust.vim.git
@@ -139,6 +136,18 @@
 [submodule "pack/default/start/nvim-lspconfig"]
 	path = pack/default/start/nvim-lspconfig
 	url = git@github.com:neovim/nvim-lspconfig.git
-[submodule "pack/default/start/deoplete-lsp"]
-	path = pack/default/start/deoplete-lsp
-	url = git@github.com:deoplete-plugins/deoplete-lsp.git
+[submodule "pack/default/start/ddc.vim"]
+	path = pack/default/start/ddc.vim
+	url = git@github.com:Shougo/ddc.vim.git
+[submodule "pack/default/start/ddc-nvim-lsp"]
+	path = pack/default/start/ddc-nvim-lsp
+	url = git@github.com:Shougo/ddc-nvim-lsp.git
+[submodule "pack/default/start/ddc-matcher_head"]
+	path = pack/default/start/ddc-matcher_head
+	url = git@github.com:Shougo/ddc-matcher_head.git
+[submodule "pack/default/start/ddc-sorter_rank"]
+	path = pack/default/start/ddc-sorter_rank
+	url = git@github.com:Shougo/ddc-sorter_rank.git
+[submodule "pack/default/start/denops.vim"]
+	path = pack/default/start/denops.vim
+	url = git@github.com:vim-denops/denops.vim.git

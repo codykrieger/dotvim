@@ -307,10 +307,7 @@ au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd} setlocal ft=markdown
-au BufRead,BufNewFile *.svelte setlocal ft=html
-
 au BufNewFile,BufRead *.tsx,*.jsx set ft=typescriptreact
-
 au BufNewFile,BufRead *.nomad,*.hcl set ft=hcl
 
 if has("autocmd")

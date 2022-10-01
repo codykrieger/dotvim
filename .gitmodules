@@ -151,3 +151,6 @@
 [submodule "pack/default/start/denops.vim"]
 	path = pack/default/start/denops.vim
 	url = git@github.com:vim-denops/denops.vim.git
+[submodule "pack/default/start/vim-svelte"]
+	path = pack/default/start/vim-svelte
+	url = git@github.com:evanleck/vim-svelte.git

@@ -21,17 +21,17 @@ if [[ ! -L $HOME/.config/nvim ]] ; then
     ln -vs $ROOT_DIR $HOME/.config/nvim
 fi
 
-DEOCOMPLETE_GO_DIR=$ROOT_DIR/pack/default/start/deoplete-go
-
-if [[ -d "$DEOCOMPLETE_GO_DIR" ]] ; then
-    echo "  -> Building native plug-in for deocomplete-go..."
-    make -C $DEOCOMPLETE_GO_DIR clean
-    make -C $DEOCOMPLETE_GO_DIR
-fi
-
-if which nvim 2>&1 > /dev/null ; then
+if which nvim &> /dev/null ; then
     echo "  -> Poking neovim to update remote plug-ins..."
     nvim +UpdateRemotePlugins +qall
+else
+    echo "  -> WARNING: neovim not detected; please install and re-run this script"
+fi
+
+# FIXME: Add a .brew-formulae file to track + auto-install required dependencies.
+
+if ! which deno &> /dev/null ; then
+    echo "  -> WARNING: deno not detected, but required for ddc.vim; please install"
 fi
 
 echo -e "  \033[32m √ Done bootstrapping vim config!\033[0m"

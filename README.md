@@ -1,14 +1,10 @@
 # dotvim
 
-A modern, lightweight configuration for neovim and vim 8.0+.
+A modern, lightweight configuration for neovim.
 
 ## prerequisites
 
-- neovim + the python2/3 neovim bindings; OR
-- vim 8.0+ configured `--with-lua`, `--with-python3`, and `--with-cscope`
-
-_Note that the bad ass asynchronous autocomplete functionality of this
-configuration currently only works with **neovim**._
+- neovim + the python2/3 neovim bindings
 
 If you're on macOS, the easiest way to acquire the right versions of things is
 to use [Homebrew][homebrew]:
@@ -16,16 +12,9 @@ to use [Homebrew][homebrew]:
 neovim:
 
 ```bash
-brew install neovim/neovim/neovim # yes, three times
-brew install python python3
-pip2 install neovim
+brew install neovim
+brew install python3
 pip3 install neovim
-```
-
-vim:
-
-```bash
-brew install vim --with-lua --with-python3 # you get --with-cscope for free
 ```
 
 ## installing
@@ -38,7 +27,7 @@ curl https://raw.githubusercontent.com/codykrieger/dotvim/master/bootstrap.sh -o
 
 ### notable features
 
-- Leader set to comma `,`, not backslash `\`
+- Leader key set to comma `,`, not backslash `\`
 - Syntax-aware auto-indent
 - Sane default tab/space and tab width settings for tons of different languages
 - (_Asynchronous!_) source code linting and autocomplete for a bunch of languages

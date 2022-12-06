@@ -205,15 +205,15 @@ if has("nvim")
         require('lspconfig')['gopls'].setup{
             on_attach = on_attach,
             flags = lsp_flags,
-            settings = {
-                gopls = {
-                    analyses = {
-                        -- nilness = true,
-                        -- unusedparams = true,
-                    },
-                    -- staticcheck = true,
-                },
-            }
+            -- settings = {
+            --     gopls = {
+            --         analyses = {
+            --             -- nilness = true,
+            --             -- unusedparams = true,
+            --         },
+            --         -- staticcheck = true,
+            --     },
+            -- }
         }
         require('lspconfig')['rust_analyzer'].setup{
             root_dir = util.root_pattern("Cargo.toml", ".git"),

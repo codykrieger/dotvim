@@ -154,3 +154,6 @@
 [submodule "pack/default/start/vim-svelte"]
 	path = pack/default/start/vim-svelte
 	url = git@github.com:evanleck/vim-svelte.git
+[submodule "pack/default/start/ddc-ui-native"]
+	path = pack/default/start/ddc-ui-native
+	url = git@github.com:Shougo/ddc-ui-native.git

@@ -255,13 +255,14 @@ if has("nvim")
                 \   'forceCompletionPattern': '\.\w*|:\w*|->\w*' },
                 \ })
 
+            " <TAB>: completion.
             inoremap <silent><expr> <TAB>
-                \ ddc#map#pum_visible() ? '<C-n>' :
+                \ pumvisible() ? '<C-n>' :
                 \ (col('.') <= 1 <Bar><Bar> getline('.')[col('.') - 2] =~# '\s') ?
                 \ '<TAB>' : ddc#map#manual_complete()
 
             " <S-TAB>: completion back.
-            inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
+            inoremap <expr><S-TAB>  pumvisible() ? '<C-p>' : '<C-h>'
 
             call ddc#enable()
         ]]

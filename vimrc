@@ -313,30 +313,29 @@ au BufRead,BufNewFile *.{md,markdown,mdown,mkd} setlocal ft=markdown
 au BufNewFile,BufRead *.tsx,*.jsx set ft=typescriptreact
 au BufNewFile,BufRead *.nomad,*.hcl set ft=hcl
 
-if has("autocmd")
-  " language-specific indentation settings
-  autocmd FileType c,cpp                      setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
-  autocmd FileType sh,csh,tcsh,zsh            setlocal ts=4 sts=4 sw=4 et
-  autocmd FileType php,javascript,css         setlocal ts=4 sts=4 sw=4 et
-  autocmd FileType text,markdown              setlocal ts=4 sts=4 sw=4 et tw=80 wrap
+" language-specific indentation settings
+au FileType c,cpp                      setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
+au FileType sh,csh,tcsh,zsh            setlocal ts=4 sts=4 sw=4 et
+au FileType php,javascript,css         setlocal ts=4 sts=4 sw=4 et
+au FileType text,markdown              setlocal ts=4 sts=4 sw=4 et tw=80 wrap
 
-  autocmd FileType html,xhtml,xml,gohtmltmpl  setlocal ts=4 sts=4 sw=4 et
-  autocmd FileType ruby,eruby,yaml            setlocal ts=2 sts=2 sw=2 et
-  autocmd FileType scm,sml,lisp               setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
+au FileType html,xhtml,xml,gohtmltmpl  setlocal ts=4 sts=4 sw=4 et
+au FileType ruby,eruby,yaml            setlocal ts=2 sts=2 sw=2 et
+au FileType scm,sml,lisp               setlocal ts=4 sts=4 sw=4 et tw=80 nowrap
 
-  autocmd FileType changelog                  setlocal ts=4 sts=4 sw=4 et tw=80 wrap
+au FileType changelog                  setlocal ts=4 sts=4 sw=4 et tw=80 wrap
 
-  autocmd FileType vim                        setlocal nowrap
+au FileType vim                        setlocal nowrap
 
-  autocmd FileType terraform,hcl              setlocal ts=2 sts=2 sw=2 et
+au FileType terraform,hcl              setlocal ts=2 sts=2 sw=2 et
 
-  " language-specific general settings
+" language-specific general settings
 
-  " run file
-  autocmd FileType php noremap <C-M> :w!<CR>:!php %<CR>
-  " check syntax
-  autocmd FileType php noremap <C-L> :w!<CR>:!php -l %<CR>
-endif
+" run file
+au FileType php noremap <C-M> :w!<CR>:!php %<CR>
+
+" check syntax
+au FileType php noremap <C-L> :w!<CR>:!php -l %<CR>
 
 augroup filetype
   au! BufRead,BufNewFile *.proto setfiletype proto
@@ -444,6 +443,7 @@ endfunc
 
 " Use modeline overrides at the top of files if present
 set modeline
+
 " Only look at this number of lines for modeline
 set modelines=10
 

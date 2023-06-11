@@ -157,3 +157,6 @@
 [submodule "pack/default/start/ddc-ui-native"]
 	path = pack/default/start/ddc-ui-native
 	url = git@github.com:Shougo/ddc-ui-native.git
+[submodule "pack/default/start/vim-ledger"]
+	path = pack/default/start/vim-ledger
+	url = git@github.com:ledger/vim-ledger.git

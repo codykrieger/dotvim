@@ -136,27 +136,18 @@
 [submodule "pack/default/start/nvim-lspconfig"]
 	path = pack/default/start/nvim-lspconfig
 	url = git@github.com:neovim/nvim-lspconfig.git
-[submodule "pack/default/start/ddc.vim"]
-	path = pack/default/start/ddc.vim
-	url = git@github.com:Shougo/ddc.vim.git
-[submodule "pack/default/start/ddc-nvim-lsp"]
-	path = pack/default/start/ddc-nvim-lsp
-	url = git@github.com:Shougo/ddc-nvim-lsp.git
-[submodule "pack/default/start/ddc-matcher_head"]
-	path = pack/default/start/ddc-matcher_head
-	url = git@github.com:Shougo/ddc-matcher_head.git
-[submodule "pack/default/start/ddc-sorter_rank"]
-	path = pack/default/start/ddc-sorter_rank
-	url = git@github.com:Shougo/ddc-sorter_rank.git
-[submodule "pack/default/start/denops.vim"]
-	path = pack/default/start/denops.vim
-	url = git@github.com:vim-denops/denops.vim.git
 [submodule "pack/default/start/vim-svelte"]
 	path = pack/default/start/vim-svelte
 	url = git@github.com:evanleck/vim-svelte.git
-[submodule "pack/default/start/ddc-ui-native"]
-	path = pack/default/start/ddc-ui-native
-	url = git@github.com:Shougo/ddc-ui-native.git
 [submodule "pack/default/start/vim-ledger"]
 	path = pack/default/start/vim-ledger
 	url = git@github.com:ledger/vim-ledger.git
+[submodule "pack/default/start/cmp-nvim-lsp"]
+	path = pack/default/start/cmp-nvim-lsp
+	url = git@github.com:hrsh7th/cmp-nvim-lsp.git
+[submodule "pack/default/start/nvim-cmp"]
+	path = pack/default/start/nvim-cmp
+	url = git@github.com:hrsh7th/nvim-cmp.git
+[submodule "pack/default/start/ultisnips"]
+	path = pack/default/start/ultisnips
+	url = git@github.com:SirVer/ultisnips.git

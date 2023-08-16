@@ -151,3 +151,6 @@
 [submodule "pack/default/start/ultisnips"]
 	path = pack/default/start/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "pack/default/start/gruvbox"]
+	path = pack/default/start/gruvbox
+	url = git@github.com:morhetz/gruvbox.git

@@ -128,6 +128,12 @@ endfunc
 
 " ******* LINTING AND AUTOCOMPLETE *******
 
+set wildmode=list:longest,list:full
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor,node_modules
+set wildignore+=*.eot,*.svg,*.ttf,*.woff,*.jpg,*.png,*.gif,*.swp,*.psd
+set wildignore+=*/tmp/*,*/Build/*,*/build/*
+set completeopt-=preview
+
 if has("nvim")
     lua <<EOF
         local cmp = require'cmp'
@@ -174,7 +180,7 @@ if has("nvim")
                     else
                         fallback()
                     end
-                end, {"i","s","c",}),
+                end, {"i","s",}),
                 ['<S-Tab>'] = function(fallback)
                     if not cmp.select_prev_item() then
                         if vim.bo.buftype ~= 'prompt' and has_words_before() then

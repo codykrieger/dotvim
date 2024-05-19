@@ -49,9 +49,6 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git@github.com:wincent/Command-T.git
-[submodule "bundle/molokai"]
-	path = pack/default/start/molokai
-	url = git@github.com:mrtazz/molokai.vim.git
 [submodule "bundle/mustache"]
 	path = pack/default/start/mustache
 	url = git@github.com:juvenn/mustache.vim.git

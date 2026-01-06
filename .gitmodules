@@ -130,18 +130,12 @@
 [submodule "pack/default/start/zig.vim"]
 	path = pack/default/start/zig.vim
 	url = git@github.com:ziglang/zig.vim.git
-[submodule "pack/default/start/nvim-lspconfig"]
-	path = pack/default/start/nvim-lspconfig
-	url = git@github.com:neovim/nvim-lspconfig.git
 [submodule "pack/default/start/vim-svelte"]
 	path = pack/default/start/vim-svelte
 	url = git@github.com:evanleck/vim-svelte.git
 [submodule "pack/default/start/vim-ledger"]
 	path = pack/default/start/vim-ledger
 	url = git@github.com:ledger/vim-ledger.git
-[submodule "pack/default/start/cmp-nvim-lsp"]
-	path = pack/default/start/cmp-nvim-lsp
-	url = git@github.com:hrsh7th/cmp-nvim-lsp.git
 [submodule "pack/default/start/nvim-cmp"]
 	path = pack/default/start/nvim-cmp
 	url = git@github.com:hrsh7th/nvim-cmp.git

@@ -202,22 +202,22 @@ if has("nvim")
             })
         })
 
-        -- Set up lspconfig.
-        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+        vim.lsp.config['svelte'] = {
+        }
 
-        local util = require "lspconfig/util"
+        -- vim.lsp.enable('svelte')
 
-        require('lspconfig')['svelte'].setup{
-            capabilities = capabilities
+        vim.lsp.config['ts_ls'] = {
         }
-        require('lspconfig')['ts_ls'].setup{
-            capabilities = capabilities
+
+        -- vim.lsp.enable('ts_ls')
+
+        vim.lsp.config['zls'] = {
         }
-        require('lspconfig')['zls'].setup{
-            capabilities = capabilities
-        }
-        require('lspconfig')['gopls'].setup{
-            capabilities = capabilities
+
+        -- vim.lsp.enable('zls')
+
+        vim.lsp.config['gopls'] = {
             -- settings = {
             --     gopls = {
             --         analyses = {
@@ -228,28 +228,32 @@ if has("nvim")
             --     },
             -- }
         }
-        require('lspconfig')['rust_analyzer'].setup{
-            capabilities = capabilities,
-            root_dir = util.root_pattern("Cargo.toml", ".git"),
-            settings = {
-                ["rust-analyzer"] = {
-                    imports = {
-                        granularity = {
-                            group = "module",
-                        },
-                        prefix = "self",
-                    },
-                    cargo = {
-                        buildScripts = {
-                            enable = true,
-                        },
-                    },
-                    procMacro = {
-                        enable = true
-                    },
-                }
-            }
+
+        -- vim.lsp.enable('gopls')
+
+        vim.lsp.config['rust_analyzer'] = {
+            -- root_dir = util.root_pattern("Cargo.toml", ".git"),
+            -- settings = {
+            --     ["rust-analyzer"] = {
+            --         imports = {
+            --             granularity = {
+            --                 group = "module",
+            --             },
+            --             prefix = "self",
+            --         },
+            --         cargo = {
+            --             buildScripts = {
+            --                 enable = true,
+            --             },
+            --         },
+            --         procMacro = {
+            --             enable = true
+            --         },
+            --     }
+            -- }
         }
+
+        -- vim.lsp.enable('rust_analyzer')
 
         -- The following Lua snippet was copied pretty much verbatim from:
         -- https://github.com/neovim/nvim-lspconfig#suggested-configuration
